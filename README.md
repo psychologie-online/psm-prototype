@@ -1,0 +1,4 @@
+prototype
+=========
+
+Pro potřeby prototypování
