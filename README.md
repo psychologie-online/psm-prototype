@@ -5,4 +5,4 @@ Pro potřeby prototypování. Pro ostrou verzi webu vytvoříme vlastní repozit
 
 ## Použitý framework
 + [Foundation 5.2.1](http://foundation.zurb.com/develop/download.html)
-+ [Chosen](http://harvesthq.github.io/chosen/)
++ [Chosen v1.1.0](http://harvesthq.github.io/chosen/)
