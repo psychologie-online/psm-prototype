@@ -3,11 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kategorie</title>
+  <title>Podkategorie</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
+
+<!--
+  Top Bar navigation
+  http://foundation.zurb.com/docs/components/topbar.html
+-->
+<header class="contain-to-grid sticky">
+  <nav class="top-bar" data-topbar data-options>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">Muzeum psychologie</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="has-form">
+          <!-- Chybí nám wireframe výpisu výsledků -->
+          <div class="row collapse">
+            <div class="large-8 small-9 columns">
+              <input type="text" placeholder="Hledat">
+            </div>
+            <div class="large-4 small-3 columns">
+              <a href="#" class="alert button expand">Najít</a>
+            </div>
+          </div>
+        </li>
+        <li class="divider"></li>
+        <li><a href="katalog.html">Katalog</a></li>
+        <li><a href="kurzy.html">Kurzy</a></li>
+        <li><a href="cesta-experiment.html">Cesta</a></li>
+      </ul>
+    </section>
+  </nav>
+</header>
 
 <!--
   Breadcrumbs
