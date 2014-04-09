@@ -4226,7 +4226,7 @@ dialog[open] {
 
 .left-off-canvas-menu {
   -webkit-backface-visibility: hidden;
-  width: 15.625rem;
+  width: 25.625rem;
   top: 0;
   bottom: 0;
   position: absolute;
@@ -4246,7 +4246,7 @@ dialog[open] {
 
 .right-off-canvas-menu {
   -webkit-backface-visibility: hidden;
-  width: 15.625rem;
+  width: 25.625rem;
   top: 0;
   bottom: 0;
   position: absolute;
@@ -4287,11 +4287,11 @@ ul.off-canvas-list {
       background: #242424; }
 
 .move-right > .inner-wrap {
-  -webkit-transform: translate3d(15.625rem, 0, 0);
-  -moz-transform: translate3d(15.625rem, 0, 0);
-  -ms-transform: translate3d(15.625rem, 0, 0);
-  -o-transform: translate3d(15.625rem, 0, 0);
-  transform: translate3d(15.625rem, 0, 0); }
+  -webkit-transform: translate3d(25.625rem, 0, 0);
+  -moz-transform: translate3d(25.625rem, 0, 0);
+  -ms-transform: translate3d(25.625rem, 0, 0);
+  -o-transform: translate3d(25.625rem, 0, 0);
+  transform: translate3d(25.625rem, 0, 0); }
 .move-right .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
@@ -4311,11 +4311,11 @@ ul.off-canvas-list {
       background: rgba(255, 255, 255, 0.05); } }
 
 .move-left > .inner-wrap {
-  -webkit-transform: translate3d(-15.625rem, 0, 0);
-  -moz-transform: translate3d(-15.625rem, 0, 0);
-  -ms-transform: translate3d(-15.625rem, 0, 0);
-  -o-transform: translate3d(-15.625rem, 0, 0);
-  transform: translate3d(-15.625rem, 0, 0); }
+  -webkit-transform: translate3d(-25.625rem, 0, 0);
+  -moz-transform: translate3d(-25.625rem, 0, 0);
+  -ms-transform: translate3d(-25.625rem, 0, 0);
+  -o-transform: translate3d(-25.625rem, 0, 0);
+  transform: translate3d(-25.625rem, 0, 0); }
 .move-left .exit-off-canvas {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
@@ -4347,26 +4347,26 @@ ul.off-canvas-list {
   -o-transform: translate(100%, 0);
   transform: translate(100%, 0); }
 .csstransforms.no-csstransforms3d .move-left > .inner-wrap {
-  -webkit-transform: translate(-15.625rem, 0);
-  -moz-transform: translate(-15.625rem, 0);
-  -ms-transform: translate(-15.625rem, 0);
-  -o-transform: translate(-15.625rem, 0);
-  transform: translate(-15.625rem, 0); }
+  -webkit-transform: translate(-25.625rem, 0);
+  -moz-transform: translate(-25.625rem, 0);
+  -ms-transform: translate(-25.625rem, 0);
+  -o-transform: translate(-25.625rem, 0);
+  transform: translate(-25.625rem, 0); }
 .csstransforms.no-csstransforms3d .move-right > .inner-wrap {
-  -webkit-transform: translate(15.625rem, 0);
-  -moz-transform: translate(15.625rem, 0);
-  -ms-transform: translate(15.625rem, 0);
-  -o-transform: translate(15.625rem, 0);
-  transform: translate(15.625rem, 0); }
+  -webkit-transform: translate(25.625rem, 0);
+  -moz-transform: translate(25.625rem, 0);
+  -ms-transform: translate(25.625rem, 0);
+  -o-transform: translate(25.625rem, 0);
+  transform: translate(25.625rem, 0); }
 
 .no-csstransforms .left-off-canvas-menu {
-  left: -15.625rem; }
+  left: -25.625rem; }
 .no-csstransforms .right-off-canvas-menu {
-  right: -15.625rem; }
+  right: -25.625rem; }
 .no-csstransforms .move-left > .inner-wrap {
-  right: 15.625rem; }
+  right: 25.625rem; }
 .no-csstransforms .move-right > .inner-wrap {
-  left: 15.625rem; }
+  left: 25.625rem; }
 
 /* Foundation Dropdowns */
 .f-dropdown {
