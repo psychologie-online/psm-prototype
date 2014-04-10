@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cesta</title>
   <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="http://i.icomoon.io/public/temp/bda30502c4/UntitledProject1/style.css">
+
   <script src="js/vendor/modernizr.js"></script>
 </head>
 
@@ -122,15 +124,24 @@ Nápady:
 -->
 <div class="row">
   <div class="small-6 columns">
-    <a href="cesta-experiment.html" class="large button radius">Zpět</a>
+    <a id="prevPage" rel="prev" href="cesta-experiment.html" class="large button radius">
+      <div>
+        <span class="icon-arrow-left"></span><span class="mls"></span>
+      </div>
+    </a>
   </div>
-  <div class="small-6 columns text-right">
-    <a href="cesta-text.html" class="large button radius">Další</a>
+  <div class="small-6 columns text-right right">
+    <a id="nextPage" rel="next" href="cesta-text.html" class="large button radius">
+      <div>
+        <span class="icon-uniE60D"></span><span class="mls"></span>
+      </div>
+    </a>
   </div>
 </div>
 
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
+<script src="js/cesta.js"></script>
 <script>
 $(document).foundation();
 </script>
