@@ -59,36 +59,43 @@
     </div>
   </div>
   <hr>
-  <div class="row">
-    <div class="medium-2 columns">
-      <a href="kategorie.html"><img src="http://placehold.it/50x50" /></a>
-    </div>
-    <div class="medium-10 columns">
-      <h4><a href="kategorie.html">Pozornost</a></h4>
-      <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache.</p>
-    </div>
-  </div>
-  <br />
-  <div class="row">
-    <div class="medium-2 columns">
-      <a href="kategorie.html"><img src="http://placehold.it/50x50" /></a>
-    </div>
-    <div class="medium-10 columns">
-      <h4><a href="kategorie.html">Paměť</a></h4>
-      <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache.</p>
-      <p><strong>Podkategorie:</strong> <a href="podkategorie.html">Paměť 1</a> | <a href="podkategorie.html">Paměť 2</a></p>
-    </div>
-  </div>
+  <ul id="items">
+    <li>
+      <div class="row">
+        <div class="medium-2 columns">
+          <a href="kategorie.html"><img src="http://placehold.it/50x50" /></a>
+        </div>
+        <div class="medium-10 columns">
+          <h4><a href="kategorie.html">Pozornost</a></h4>
+          <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <div class="medium-2 columns">
+          <a href="kategorie.html"><img src="http://placehold.it/50x50" /></a>
+        </div>
+        <div class="medium-10 columns">
+          <h4><a href="kategorie.html">Paměť</a></h4>
+          <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache.</p>
+          <p><strong>Podkategorie:</strong> <a href="podkategorie.html">Paměť 1</a> | <a href="podkategorie.html">Paměť 2</a></p>
+        </div>
+      </div>
+    </li>
 
-  <div class="row">
-    <div class="medium-2 columns">
-      <a href="kategorie.html"><img src="http://placehold.it/50x50" /></a>
-    </div>
-    <div class="medium-10 columns">
-      <h4><a href="kategorie.html">Myšlení</a></h4>
-      <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache.</p>
-    </div>
-  </div>
+    <li>
+      <div class="row">
+        <div class="medium-2 columns">
+          <a href="kategorie.html"><img src="http://placehold.it/50x50" /></a>
+        </div>
+        <div class="medium-10 columns">
+          <h4><a href="kategorie.html">Myšlení</a></h4>
+          <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
 </aside>
 
 <!-- MAIN CONTENT -->
@@ -159,6 +166,10 @@
 
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
+<script src="js/Sortable.min.js"></script>
+<script>
+new Sortable(items);
+</script>
 <script>
 $(document).foundation();
 </script>
