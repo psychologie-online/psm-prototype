@@ -1,4 +1,13 @@
 /*
+	Fonty
+*/
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
+
+*, body, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Gentium Book Basic', serif;
+}
+
+/*
 	Off Canvas
 */
 .right-off-canvas-menu h3 {
@@ -7,16 +16,19 @@
 	margin-bottom: 0;
 	line-height: 1;
 }
-.right-off-canvas-menu p, .right-off-canvas-menu h4 {
+.right-off-canvas-menu p, .right-off-canvas-menu h4, .navod li {
 	font-size: 75%;
 	color: gray;
 }
-.right-off-canvas-menu .icon-menu {
-	font-size: 1.8rem;
+.right-off-canvas-menu .icon-menu, .icon-heart-broken {
+	font-size: 1.5rem;
 	line-height: 1.3;
 	color: darkgray;
 	text-shadow: 0px 1px black;
 }
 .right-off-canvas-menu ul#items > li:hover .icon-menu {
 	cursor: move;
+}
+.right-off-canvas-menu .navod li, .navod h4 {
+	color: #222;
 }
