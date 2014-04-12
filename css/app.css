@@ -6,29 +6,98 @@
 *, body, h1, h2, h3, h4, h5, h6 {
 	font-family: 'Gentium Book Basic', serif;
 }
+header.contain-to-grid {
+	z-index: 900;
+}
+div.wrap {
+	min-height: 100%;
+	background: #fff;
+}
+div.wrap {
+	width: 100%;
+	overflow: hidden;
+} /* Bugs? */
+
 
 /*
 	Off Canvas
 */
-.right-off-canvas-menu h3 {
+.wrap,
+.contain-to-grid {
+
+	/* Super-compliant Transition :) */
+	-webkit-transition: -moz-transform 0.3s ease-in-out;
+	   -moz-transition: -moz-transform 0.3s ease-in-out;
+	    -ms-transition: -moz-transform 0.3s ease-in-out;
+	     -o-transition: -moz-transform 0.3s ease-in-out;
+	        transition: -moz-transform 0.3s ease-in-out;
+	-webkit-transition: -o-transform 0.3s ease-in-out;
+	   -moz-transition: -o-transform 0.3s ease-in-out;
+	    -ms-transition: -o-transform 0.3s ease-in-out;
+	     -o-transition: -o-transform 0.3s ease-in-out;
+	        transition: -o-transform 0.3s ease-in-out;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	   -moz-transition: -webkit-transform 0.3s ease-in-out;
+	    -ms-transition: -webkit-transform 0.3s ease-in-out;
+	     -o-transition: -webkit-transform 0.3s ease-in-out;
+	        transition: -webkit-transform 0.3s ease-in-out;
+	-webkit-transition: transform 0.3s ease-in-out;
+	   -moz-transition: transform 0.3s ease-in-out;
+	    -ms-transition: transform 0.3s ease-in-out;
+	     -o-transition: transform 0.3s ease-in-out;
+	        transition: transform 0.3s ease-in-out;
+
+	-webkit-transform: translate3d(0px, 0, 0);
+	   -moz-transform: translate3d(0px, 0, 0);
+	    -ms-transform: translate3d(0px, 0, 0);
+	     -o-transform: translate3d(0px, 0, 0);
+	        transform: translate3d(0px, 0, 0);
+}
+
+.wrap.menu-open,
+.contain-to-grid.menu-open {
+	-webkit-transform: translate3d(-25rem, 0, 0);
+	   -moz-transform: translate3d(-25rem, 0, 0);
+	    -ms-transform: translate3d(-25rem, 0, 0);
+	     -o-transform: translate3d(-25rem, 0, 0);
+	        transform: translate3d(-25rem, 0, 0);
+}
+.off-canvas.menu {
+	position: fixed;
+	top: 0px; right: 0px;
+	background: #212121;
+	color: #999;
+	height: 100%;
+	width: 25rem;
+	z-index: -100;
+	padding: 1.5rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.off-canvas.menu h3 {
 	color: white;
 	margin-top: 1.25rem;
 	margin-bottom: 0;
 	line-height: 1;
 }
-.right-off-canvas-menu p, .right-off-canvas-menu h4, .navod li {
+.off-canvas.menu p,
+.off-canvas.menu h4,
+.navod li {
 	font-size: 75%;
 	color: gray;
 }
-.right-off-canvas-menu .icon-menu, .icon-heart-broken {
+.off-canvas.menu ul#items > li:hover .icon-menu {
+	cursor: move;
+}
+.off-canvas.menu .navod li,
+.navod h4 {
+	color: #222;
+}
+.icon-menu,
+.icon-heart-broken {
 	font-size: 1.5rem;
 	line-height: 1.3;
 	color: darkgray;
 	text-shadow: 0px 1px black;
-}
-.right-off-canvas-menu ul#items > li:hover .icon-menu {
-	cursor: move;
-}
-.right-off-canvas-menu .navod li, .navod h4 {
-	color: #222;
 }

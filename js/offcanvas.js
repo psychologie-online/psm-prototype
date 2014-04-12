@@ -1,30 +1,31 @@
 // Click anywhere to close sidebars
-$(document).on(click, function(e) {
+$(document).click (function(e) {
 	if (
 		!$(e.target).is('a.menu') &&
-		$(e.target).closest('div.menu').length == 0
+		$(e.target).closest('aside.menu').length === 0
 	){
 		closeMenu();
 	}
 });
 
-// Click Cesty Icon
-$('a.menu').on(click, function(e){
-	e.preventDefault();
+// Click Cesty
+$('a.menu').click (function(e){
+	e.preventDefault(); // Zabraňuje při kliknutí na odkaz vrácení na začátek stránky tzn. zabraňuje akci odkazu.
+	e.stopPropagation();
 	if( $('.wrap').hasClass('menu-open') ){
 		closeMenu();
 	} else {
 		openMenu();
+
 	}
 });
 function openMenu(){
-	$('div.menu').show();
-	$('.wrap, .sticky').addClass('menu-open');
+	$('.wrap, .contain-to-grid').addClass('menu-open');
 	setTimeout(function(){
-		$('div.menu').css('z-index', 200);
+		$('aside.menu').css('z-index', 200);
 	}, 300);
 }
 function closeMenu(){
-	$('div.menu').css('z-index', -100);
-	$('.wrap, .sticky').removeClass('menu-open');
+	$('aside.menu').css('z-index', -100);
+	$('.wrap, .contain-to-grid').removeClass('menu-open');
 }
