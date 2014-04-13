@@ -18,6 +18,19 @@ div.wrap {
 	overflow: hidden;
 } /* Bugs? */
 
+.cesty-quantity {
+	background-color: #c0392b;
+	border-radius: 10px;
+	color: white;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 2px 5px;
+	position: relative;
+	text-align: center;
+	text-shadow: none;
+	top: -7px;
+	z-index: 10;
+}
 
 /*
 	Off Canvas
