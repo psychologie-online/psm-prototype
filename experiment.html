@@ -6,9 +6,8 @@
   <title>Experiment</title>
   <link rel="stylesheet" href="css/foundation.css" />
   <link rel="stylesheet" href="css/app.css" />
-
   <!-- @font-face icons from icomoon.io/app/ -->
-  <link rel="stylesheet" href="http://i.icomoon.io/public/temp/754af02adc/Psychologie/style.css">
+  <link rel="stylesheet" href="css/ico.css">
 
   <script src="js/vendor/modernizr.js"></script>
 </head>
@@ -45,7 +44,7 @@
         <li><a href="katalog.html">Katalog</a></li>
         <li><a href="kurzy.html">Kurzy</a></li>
         <li class="divider"></li>
-        <li><a class="menu" href="#"><span class="icon-menu2"></span><span class="mls"> Cesta</span> <span class="cesty-quantity">3</span></a></li>
+        <li><a class="menu" href="#"><span class="icon-menu2"></span><span class="mls"> Cesta </span><span id="quantity" class="cesty-quantity">0</span></a></li>
       </ul>
     </section>
   </nav>
@@ -72,14 +71,18 @@
 </div>
 
 <div class="row">
-  <div class="large-12 columns">
-    <h1 class="text-center">Experiment</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
-    <!-- APLIKACE/DEMO -->
+
+  <h1 class="text-center">Experiment</h1>
+  <!-- APLIKACE/DEMO -->
+  <div class="large-7 columns">
     <p class="text-center"><img src="http://placehold.it/500x500" /></p>
-    <p class="text-center"><a class="small success radius button" href="#">Přidat do cesty</a> <a class="small radius button" href="#">Sdílet</a>
-    </p>
   </div>
+  <div class="large-5 columns">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+  </div>
+
+  <p class="text-center"><a class="small success radius button add-to-sidebar" data-exp-name="Jméno experimentu" data-exp-text="Krátký popis experimentu Lorem ipsum dolor sit amet, consectetur adipiscing elit." href="#">Přidat do cesty</a> <a class="small radius button" href="#">Sdílet</a>
+  </p>
 </div>
 
 <div class="row" style="border-top:2px dotted #ccc;">
@@ -115,60 +118,85 @@
   </div>
 
   <!-- Off Canvas -->
-  <aside class="off-canvas menu">
+  <aside id="off-canvas-menu" class="off-canvas menu">
     <div class="row">
       <div class="large-10 columns large-centered text-center">
         <h3>Oblíbené experimenty</h3>
       </div>
     </div>
     <hr>
-    <ul id="items">
-      <li>
+    <ul id="list" class="no-bullet">
+      <li data-sortable-id="item1" class="sortable item">
+        <hr>
         <div class="row">
-          <div class="medium-1 columns">
-            <form>
-              <input type="checkbox" name="cesta" value="ano">
-            </form>
-          </div>
-          <div class="medium-2 columns text-center">
+          <div class="medium-1 columns text-center">
             <div>
               <span class="icon-menu"></span><span class="mls"></span>
             </div>
           </div>
-          <div class="medium-7 columns">
+          <div class="medium-1 columns">
+            <form>
+              <input type="checkbox" name="cesta" value="ano">
+              <label class="green-border" for="a"></label>
+            </form>
+          </div>
+          <div class="medium-8 columns">
             <h4><a href="kategorie.html">Pozornost</a></h4>
             <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache.</p>
           </div>
           <div class="medium-2 columns text-center">
-            <span class="icon-heart-broken"></span><span class="mls"></span>
+            <span class="icon-close"></span><span class="mls"></span>
           </div>
         </div>
+        <hr>
       </li>
-      <li>
+      <li data-sortable-id="item2" class="sortable item">
+        <hr>
         <div class="row">
           <div class="medium-1 columns text-center">
             <div>
               <span class="icon-menu"></span><span class="mls"></span>
             </div>
           </div>
-          <div class="medium-10 columns">
-            <h4><a href="kategorie.html">Paměť</a></h4>
+          <div class="medium-1 columns">
+            <form>
+              <input type="checkbox" name="cesta" value="ano">
+              <label class="green" for="b"></label>
+            </form>
+          </div>
+          <div class="medium-8 columns">
+            <h4><a href="kategorie.html">Pozornost</a></h4>
             <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache.</p>
           </div>
+          <div class="medium-2 columns text-center">
+            <span class="icon-close"></span><span class="mls"></span>
+          </div>
         </div>
+        <hr>
       </li>
-      <li>
+      <li data-sortable-id="item3" class="sortable item">
+        <hr>
         <div class="row">
           <div class="medium-1 columns text-center">
             <div>
               <span class="icon-menu"></span><span class="mls"></span>
             </div>
           </div>
-          <div class="medium-10 columns">
-            <h4><a href="kategorie.html">Myšlení</a></h4>
+          <div class="medium-1 columns">
+            <form>
+              <input type="checkbox" name="cesta" value="ano">
+              <label class="green-background" for="c"></label>
+            </form>
+          </div>
+          <div class="medium-8 columns">
+            <h4><a href="kategorie.html">Pozornost</a></h4>
             <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache.</p>
           </div>
+          <div class="medium-2 columns text-center">
+            <span class="icon-close"></span><span class="mls"></span>
+          </div>
         </div>
+        <hr>
       </li>
     </ul>
     <div class="row">
@@ -176,16 +204,17 @@
         <a href="cesta-experiment.html" class="button radius">Spustit cestu</a>
       </div>
     </div>
+    <!-- <hr> -->
+    <br>
     <!-- Návod k Cestám -->
     <div class="row navod">
-      <div class="medium-10 columns medium-centered text-center">
-        <hr>
+      <div class="medium-12 columns medium-centered text-center">
         <h4>Návod</h4>
       </div>
       <div class="medium-10 columns medium-centered">
         <ol>
-          <li>Přidejte experiment pomocí ikonky <span class="icon-star2"></span><span class="mls"> srdcce</span> do oblíbených. Experiment se pak ukáže v tomto seznamu.</li>
-          <li>Do seznamu můžete přidat experimentů, kolik chcete. Můžete změnit jejich pořadí pomocí <span class="icon-menu2"></span><span class="mls"> uchopením a přetáhnutím této ikonky</span></li>
+          <li>Přidejte experiment pomocí ikonky <span class="icon-star2"></span><span class="mls"> </span>srdce do oblíbených. Experiment se pak ukáže v tomto seznamu.</li>
+          <li>Do seznamu můžete přidat experimentů, kolik chcete. Můžete změnit jejich pořadí pomocí <span class="icon-menu2"></span><span class="mls"> </span>uchopením a přetáhnutím této ikonky</li>
           <li>Všechny oblíbené experimenty lze spustit ve speciálním módu určeném pro příjemnější postupné procházení.</li>
           <li>Bla bla profit!</li>
         </ol>
@@ -198,7 +227,7 @@
   <script src="js/Sortable.min.js"></script>
   <script src="js/offcanvas.js"></script>
   <script>
-  new Sortable(items);
+  new Sortable(list, {ghostClass: "sortable-ghost"});
   </script>
   <script>
   $(document).foundation();
