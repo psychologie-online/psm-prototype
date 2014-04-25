@@ -84,13 +84,15 @@ function prependItem() {
 }
 
 function removeItem() {
-	$(".icon-close").click (function(e) {
-		document.find(e.closest('.sortable.item').remove());
-	});
+	// $(".icon-close").click (function(e) {
+	// 	document.find(e.closest('.sortable.item').remove());
+	// });
 }
 
 
 // COOKIES
+//
+// ! Doesn't work in Chrome when testing local – use Firefox
 // Store an order of our sortable list for user in cookie
 // ?
 function storeCookie() {
@@ -168,7 +170,7 @@ $(document).ready(function() {
 		openMenu();
 	});
 
-	$(remove_from_sidebar).click (function(e) {
+	$(".icon-close").click (function(e) {
 		$(e.target).parents('.sortable.item').remove();
 	});
 
