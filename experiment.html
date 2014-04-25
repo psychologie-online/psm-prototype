@@ -81,7 +81,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
   </div>
 
-  <p class="text-center"><a class="small success radius button add-to-sidebar" data-exp-name="Jméno experimentu" data-exp-text="Krátký popis experimentu Lorem ipsum dolor sit amet, consectetur adipiscing elit." href="#">Přidat do cesty</a> <a class="small radius button" href="#">Sdílet</a>
+  <p class="text-center"><a class="small success radius button add-to-sidebar" data-exp-id="exp_ID_4" data-exp-name="Jméno experimentu" data-exp-text="Krátký popis experimentu Lorem ipsum dolor sit amet, consectetur adipiscing elit." href="#">Přidat do cesty</a> <a class="small radius button" href="#">Sdílet</a>
   </p>
 </div>
 
@@ -120,13 +120,13 @@
   <!-- Off Canvas -->
   <aside id="off-canvas-menu" class="off-canvas menu">
     <div class="row">
-      <div class="large-10 columns large-centered text-center">
+      <div class="large-12 columns large-centered text-center">
         <h3>Oblíbené experimenty</h3>
       </div>
     </div>
     <hr>
     <ul id="list" class="no-bullet">
-      <li data-sortable-id="item1" class="sortable item">
+      <li data-sortable-id="exp_ID_1" class="sortable item">
         <hr>
         <div class="row">
           <div class="medium-1 columns text-center">
@@ -150,7 +150,7 @@
         </div>
         <hr>
       </li>
-      <li data-sortable-id="item2" class="sortable item">
+      <li data-sortable-id="exp_ID_2" class="sortable item">
         <hr>
         <div class="row">
           <div class="medium-1 columns text-center">
@@ -174,7 +174,7 @@
         </div>
         <hr>
       </li>
-      <li data-sortable-id="item3" class="sortable item">
+      <li data-sortable-id="exp_ID_3" class="sortable item">
         <hr>
         <div class="row">
           <div class="medium-1 columns text-center">
@@ -225,7 +225,9 @@
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
   <script src="js/Sortable.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
   <script src="js/offcanvas.js"></script>
+
   <script>
   new Sortable(list, {ghostClass: "sortable-ghost"});
   </script>
