@@ -44,7 +44,9 @@ div.wrap {
 /*	Off Canvas*/
 
 .wrap,
-.contain-to-grid {
+.contain-to-grid,
+.cesta footer,
+.cesta header {
 
 	/* Super-compliant Transition :) */
 -webkit-transition: -moz-transform 0.22s ease-in-out;
@@ -84,6 +86,15 @@ transform: translate3d(0px, 0, 0);
 	-o-transform: translate3d(-25rem, 0, 0);
 	transform: translate3d(-25rem, 0, 0);
 }
+.cesta .wrap.menu-open,
+.cesta footer.menu-open,
+.cesta header.menu-open {
+	-webkit-transform: translate3d(15rem, 0, 0);
+	-moz-transform: translate3d(15rem, 0, 0);
+	-ms-transform: translate3d(15rem, 0, 0);
+	-o-transform: translate3d(15rem, 0, 0);
+	transform: translate3d(15rem, 0, 0);
+}
 .off-canvas.menu {
 	position: fixed;
 	top: 0px; right: 0px;
@@ -98,6 +109,11 @@ transform: translate3d(0px, 0, 0);
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	overflow: scroll;
+}
+.cesta .off-canvas.menu {
+	width: 15rem;
+	left: 0px;
+	padding: 1.5rem 0.75rem;
 }
 .off-canvas.menu h3 {
 	color: white;
@@ -215,3 +231,84 @@ transform: translate3d(0px, 0, 0);
 		.icon-close {
 			font-size: 75%;
 		}
+		.top-bar ul.center {
+			margin: 0 auto;
+			width: 100%;
+		}
+		.cesta {
+			overflow: hidden;
+		}
+.cesta .wrap {
+	padding: 45px 0;
+}
+.cesta header,
+.cesta footer {
+	position:fixed;
+	left:0px;right:0px;
+	z-index: 100;
+	background-color: #fff;
+	height: 45px;
+	line-height: 45px;
+}
+.cesta header {
+	top:0px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.cesta footer {
+	bottom:0px;
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+.cesta aside.off-canvas.menu {
+	background-color: white;
+	border-right: 1px solid rgba(0,0,0,.1);
+}
+.cesta aside.off-canvas.menu h3 {
+	color: orange;
+	margin: 0px;
+}
+.cesta aside.off-canvas.menu > .row:first-child h3 small,
+.cesta aside.off-canvas.menu > .row:first-child .columns {
+	line-height: 90px;
+}
+.cesta aside.off-canvas.menu > .row:first-child {
+	height: 90px;
+}
+.cesta aside.off-canvas.menu ul {
+	font-size: 85%;
+}
+.cesta section {
+/*	position: fixed;
+	top: 0px;
+	right: 0;
+	left: 0;
+	bottom: 0;*/
+}
+.cesta .obsah > .columns {
+/* 	Vertical centering
+	– http://www.vanseodesign.com/css/vertical-centering/
+	– http://codepen.io/shshaw/full/gEiDt
+*/
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 60%;
+	height: 70%;
+	min-width: 10rem;
+	max-width: 65rem;
+	padding: 1.8rem;
+	margin: auto;
+	overflow: auto;
+}
+.cesta .obsah p,
+.cesta .obsah h6 {
+	font-family: 'Gentium Book Basic', Georgia, serif;
+}
+.cesta .panel {
+	border: none;
+	background-color: rgba(0,0,0,.05);
+	max-width: 50rem;
+	margin: 0 auto;
+	padding: 1.8rem;
+}

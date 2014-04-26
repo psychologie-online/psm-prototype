@@ -1,11 +1,14 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="cs">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cesta – O experimentu</title>
+  <title>Cesta – Experiment</title>
   <link rel="stylesheet" href="css/foundation.css" />
-  <link rel="stylesheet" href="http://i.icomoon.io/public/temp/bda30502c4/UntitledProject1/style.css">
+  <link rel="stylesheet" href="css/app.css" />
+  <!-- @font-face icons from icomoon.io/app/ -->
+  <link rel="stylesheet" href="css/ico.css">
+
   <script src="js/vendor/modernizr.js"></script>
 </head>
 
@@ -20,113 +23,143 @@ Nápady:
 
 -->
 
-<body>
+<body class="cesta">
 
-<!--
-  Top Bar navigation
-  http://foundation.zurb.com/docs/components/topbar.html
--->
-<header class="contain-to-grid sticky">
-  <nav class="top-bar" data-topbar data-options>
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="#">Muzeum psychologie</a></h1>
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="has-form">
-          <!-- Chybí nám wireframe výpisu výsledků -->
-          <div class="row collapse">
-            <div class="large-8 small-9 columns">
-              <input type="text" placeholder="Hledat">
-            </div>
-            <div class="large-4 small-3 columns">
-              <a href="#" class="alert button expand">Najít</a>
-            </div>
-          </div>
-        </li>
-        <li class="divider"></li>
-        <li><a href="katalog.html">Katalog</a></li>
-        <li><a href="kurzy.html">Kurzy</a></li>
-        <li><a href="cesta-experiment.html">Cesta</a></li>
-      </ul>
-    </section>
-  </nav>
-</header>
-
-<!--
-  Progress Bar
--->
-<div class="row">
-  <div class="small-11 columns">
-    <div class="progress radius round">
-      <span class="meter" style="width: 75%"></span>
+  <header>
+    <div class="row small-centered">
+      <div class="small-8 columns text-left">
+        <a href="/index.html">Muzeum psychologie</a>
+      </div>
+      <div class="small-4 columns text-right">
+        <a href="/katalog.html"><span class="icon-close"></span><span class="mls"></span></a>
+      </div>
     </div>
-  </div>
-  <div class="small-1 columns text-center">
-    3/4
-  </div>
-</div>
+  </header>
 
+<!--
+  MAIN CONTENT
+-->
+<div class="wrap">
+
+<!-- $('#wrapper').animate({scrollLeft: $($(this).attr('href')).offset().left}, 2000);
+<section></section>
+<section></section>
+<section></section>
+<section></section> -->
+
+<section>
 <!--
   Nadpis stránky
 -->
 <div class="row">
-  <div class="large-12 columns">
-    <h1>Cesta <small>3. O experimentu</small></h1>
+  <div class="large-12 columns small-centered">
+    <h2>Ikonická paměť</h2>
   </div>
 </div>
 
 <!--
   Obsah slajdu
 -->
-<div class="row">
-  <div class="large-12 columns">
-    <h2>Heading 2</h2>
-    <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache. Viral et brunch trust fund bitters. Mumblecore XOXO retro, fap ut nostrud cupidatat quis PBR elit pug. Etsy lo-fi YOLO VHS disrupt qui. Proident food truck mollit, do bicycle rights fixie in scenester whatever bespoke Godard enim photo booth Echo Park Pinterest. Velit meh Pitchfork, voluptate skateboard sed bespoke disrupt banjo tofu scenester. Cray vero lomo Helvetica, Portland Godard bitters.</p>
+<div class="row obsah">
+  <div class="large-8 columns small-centered">
+    <h6>Popis</h6>
+    <div class="panel">
+      <h2>Heading 2</h2>
+      <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache. Viral et brunch trust fund bitters. Mumblecore XOXO retro, fap ut nostrud cupidatat quis PBR elit pug. Etsy lo-fi YOLO VHS disrupt qui. Proident food truck mollit, do bicycle rights fixie in scenester whatever bespoke Godard enim photo booth Echo Park Pinterest. Velit meh Pitchfork, voluptate skateboard sed bespoke disrupt banjo tofu scenester. Cray vero lomo Helvetica, Portland Godard bitters.</p>
 
-    <h3>Heading 3</h3>
-    <p><img src="http://placehold.it/150x150" class="right" alt="">
-      Echo Park Pinterest. Velit meh Pitchfork, voluptate skateboard sed bespoke disrupt banjo tofu scenester. Cray vero lomo Helvetica, Portland Godard bitters.Echo Park Pinterest. Velit meh Pitchfork, voluptate skateboard sed bespoke disrupt banjo tofu scenester. Cray vero lomo Helvetica, Portland Godard bitters.
-    </p>
+      <h3>Heading 3</h3>
+      <p><img src="http://placehold.it/150x150" class="right" alt="">
+        Echo Park Pinterest. Velit meh Pitchfork, voluptate skateboard sed bespoke disrupt banjo tofu scenester. Cray vero lomo Helvetica, Portland Godard bitters.Echo Park Pinterest. Velit meh Pitchfork, voluptate skateboard sed bespoke disrupt banjo tofu scenester. Cray vero lomo Helvetica, Portland Godard bitters.
+      </p>
 
-    <h3>Heading 3</h3>
-    <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache. Viral et brunch trust fund bitters. Mumblecore XOXO retro, fap ut nostrud cupidatat quis PBR elit pug. Etsy lo-fi YOLO VHS disrupt qui. Proident food truck mollit.</p>
-
+      <h3>Heading 3</h3>
+      <p>Selvage cliche pug, aesthetic mustache labore skateboard 8-bit fingerstache. Viral et brunch trust fund bitters. Mumblecore XOXO retro, fap ut nostrud cupidatat quis PBR elit pug. Etsy lo-fi YOLO VHS disrupt qui. Proident food truck mollit.</p>
+    </div>
   </div>
 </div>
 <!-- . -->
 
-<!--
-  Navigace mezi slajdy
--->
-<div class="row slide-navigation">
-  <div class="small-6 columns">
-    <a id="prevPage" rel="prev" href="cesta-test.html" class="large button radius">
-      <div>
-        <span class="icon-arrow-left"></span><span class="mls"></span>
-      </div>
-    </a>
-  </div>
-  <div class="small-6 columns text-right right">
-    <a id="nextPage" rel="next" href="cesta-experiment.html" class="large button radius">
-      <div>
-        <span class="icon-uniE60D"></span><span class="mls"></span>
-      </div>
-    </a>
-  </div>
+</section>
+
+<!-- / wrap -->
 </div>
+
+<footer>
+  <div class="row text-center">
+    <!-- Off-canvas button -->
+    <div class="large-1 medium-2 small-4 columns text-center">
+      <a class="menu" href="#"><span class="icon-menu2"></span><span class="mls"></span></a>
+    </div>
+    <div class="large-9 medium-8 small-4 columns text-center">
+      <!-- Progress Bar -->
+      <div class="medium-10 columns hide-for-small-only">
+        <div class="progress radius round">
+          <span class="meter" style="width: 50%"></span>
+        </div>
+      </div>
+      <!-- Počet slajdů -->
+      <div class="medium-2 small-12 columns">
+        2/14
+      </div>
+    </div>
+    <!-- Navigace mezi slajdy -->
+    <div class="medium-2 small-4 columns text-center">
+      <div class="small-6 columns">
+        <a id="prevPage" rel="prev" href="cesta-experiment.html" class="radius">
+          <div>
+            <span class="icon-arrow-left"></span><span class="mls"></span>
+          </div>
+        </a>
+      </div>
+      <div class="small-6 columns">
+        <a id="nextPage" rel="next" href="cesta-test.html" class="radius">
+          <div>
+            <span class="icon-uniE60D"></span><span class="mls"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Off Canvas -->
+<aside id="off-canvas-menu" class="off-canvas menu">
+  <div class="row">
+    <div class="small-12 columns text-center">
+      <h3>Vaše cesta <small>2 <small>/</small> 14</small></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="no-bullet">
+        <li>
+          <h6>Ikonická paměť</h6>
+          <ul>
+            <li>Popis</li>
+            <li>Náhled experimentu</li>
+            <li>Autor</li>
+          </ul>
+        </li>
+        <li>
+          <h6>Ikonická paměť</h6>
+          <ul>
+            <li>Popis</li>
+            <li>Náhled experimentu</li>
+            <li>Autor</li>
+            <li>Test</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>
 
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
-<script src="js/cesta.js"></script>
+<!-- <script src="js/offcanvas.js"></script>
+--><script src="js/cesta.js"></script>
 <script>
 $(document).foundation();
 </script>
-
 </body>
 </html>
