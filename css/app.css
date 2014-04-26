@@ -1,34 +1,217 @@
-/*
-	Fonty
-*/
+/* Fonty */
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,latin-ext);
 
 *, body, h1, h2, h3, h4, h5, h6 {
-	font-family: 'Gentium Book Basic', serif;
+	font-family: 'Open Sans', Georgia, serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	font-family: 'Open Sans', 'sans-serif';
+}
+h1 {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.no-bullet {list-style-type: none;}
+
+header.contain-to-grid {z-index: 900;}
+
+div.wrap {
+	min-height: 100%;
+	background: #fff;
+}
+div.wrap {
+	width: 100%;
+	overflow: hidden;
 }
 
-/*
-	Off Canvas
-*/
-.right-off-canvas-menu h3 {
+.cesty-quantity {
+	background-color: #c0392b;
+	border-radius: 10px;
+	color: white;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 2px 5px;
+	position: relative;
+	text-align: center;
+	text-shadow: none;
+	top: -7px;
+	z-index: 10;
+}
+
+
+/*	Off Canvas*/
+
+.wrap,
+.contain-to-grid {
+
+	/* Super-compliant Transition :) */
+-webkit-transition: -moz-transform 0.22s ease-in-out;
+-moz-transition: -moz-transform 0.22s ease-in-out;
+-ms-transition: -moz-transform 0.22s ease-in-out;
+-o-transition: -moz-transform 0.22s ease-in-out;
+transition: -moz-transform 0.22s ease-in-out;
+-webkit-transition: -o-transform 0.22s ease-in-out;
+-moz-transition: -o-transform 0.22s ease-in-out;
+-ms-transition: -o-transform 0.22s ease-in-out;
+-o-transition: -o-transform 0.22s ease-in-out;
+transition: -o-transform 0.22s ease-in-out;
+-webkit-transition: -webkit-transform 0.22s ease-in-out;
+-moz-transition: -webkit-transform 0.22s ease-in-out;
+-ms-transition: -webkit-transform 0.22s ease-in-out;
+-o-transition: -webkit-transform 0.22s ease-in-out;
+transition: -webkit-transform 0.22s ease-in-out;
+-webkit-transition: transform 0.22s ease-in-out;
+-moz-transition: transform 0.22s ease-in-out;
+-ms-transition: transform 0.22s ease-in-out;
+-o-transition: transform 0.22s ease-in-out;
+transition: transform 0.22s ease-in-out;
+
+-webkit-transform: translate3d(0px, 0, 0);
+-moz-transform: translate3d(0px, 0, 0);
+-ms-transform: translate3d(0px, 0, 0);
+-o-transform: translate3d(0px, 0, 0);
+transform: translate3d(0px, 0, 0);
+
+}
+
+.wrap.menu-open,
+.contain-to-grid.menu-open {
+	-webkit-transform: translate3d(-25rem, 0, 0);
+	-moz-transform: translate3d(-25rem, 0, 0);
+	-ms-transform: translate3d(-25rem, 0, 0);
+	-o-transform: translate3d(-25rem, 0, 0);
+	transform: translate3d(-25rem, 0, 0);
+}
+.off-canvas.menu {
+	position: fixed;
+	top: 0px; right: 0px;
+	background: #212121;
+	color: #999;
+	height: 100%;
+	width: 25rem;
+	z-index: -100;
+	padding: 1.5rem;
+	padding-left: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: scroll;
+}
+.off-canvas.menu h3 {
 	color: white;
 	margin-top: 1.25rem;
 	margin-bottom: 0;
 	line-height: 1;
 }
-.right-off-canvas-menu p, .right-off-canvas-menu h4, .navod li {
+.off-canvas.menu h4 a {
+	text-transform: uppercase;
+	font-family: 'Open Sans', 'sans-serif';
+}
+.off-canvas.menu p,
+.off-canvas.menu h4,
+.navod li {
 	font-size: 75%;
 	color: gray;
+	font-family: 'Open Sans', 'sans-serif';
 }
-.right-off-canvas-menu .icon-menu, .icon-heart-broken {
-	font-size: 1.5rem;
-	line-height: 1.3;
-	color: darkgray;
-	text-shadow: 0px 1px black;
+.off-canvas.menu ul#list {
+	text-align: left;
+	-webkit-transition: all 400ms ease-in-out;
+	-moz-transition: all 400ms ease-in-out;
+	-ms-transition: all 400ms ease-in-out;
+	-o-transition: all 400ms ease-in-out;
+	transition: all 400ms ease-in-out;
 }
-.right-off-canvas-menu ul#items > li:hover .icon-menu {
-	cursor: move;
+/*.off-canvas.menu.menu ul#list > li:nth-child(1) {
+	background-color: rgba(250,250,250,.025);
 }
-.right-off-canvas-menu .navod li, .navod h4 {
-	color: #222;
+.off-canvas.menu.menu ul#list > li:nth-child(2) {
+	background-color: rgba(250,250,250,.05);
 }
+.off-canvas.menu.menu ul#list > li:nth-child(3) {
+	background-color: rgba(250,250,250,.075);
+}
+.off-canvas.menu.menu ul#list > li:nth-child(4) {
+	background-color: rgba(250,250,250,.1);
+}
+.off-canvas.menu.menu ul#list > li:nth-child(5) {
+	background-color: rgba(250,250,250,.125);
+}
+.off-canvas.menu.menu ul#list > li:nth-child(6) {
+	background-color: rgba(250,250,250,.15);
+	}*/
+	.off-canvas.menu ul#list > li {
+		-webkit-transition: -webkit-transform .22s,box-shadow .22s;
+		transition: transform .22s,box-shadow .22s;
+		box-shadow: 0 0 0 -.25rem rgba(0,0,0,.1);
+		border-radius: .25rem;
+	}
+	.off-canvas.menu ul#list:hover > li {
+		opacity: .5;
+		-webkit-transform: scale(0.97);
+		transform: scale(0.97);
+		background-color: transparent;
+	}
+	.highlight,
+	.off-canvas.menu ul#list:hover > li:focus,
+	.off-canvas.menu ul#list:hover > li:hover {
+		box-shadow: 0 .5rem .25rem -.25rem rgba(0,0,0,.2);
+		opacity: 1;
+		background-color: #008cba;
+		-webkit-transform: scale(1.03);
+		transform:scale(1.03);
+		-webkit-transition: -webkit-transform .088s,box-shadow .088s,background-color .088s;
+		transition: transform .088s,box-shadow .088s,background-color .088s;
+		z-index: 99999;
+	}
+	.highlight__auto {
+		background-color: auto;
+		-webkit-transition: background-color .288s;
+		transition: background-color .288s;
+	}
+	.highlight p,
+	.off-canvas.menu ul#list:hover > li:focus p,
+	.off-canvas.menu ul#list:hover > li:hover p {
+		color: whitesmoke;
+
+	}
+	.highlight h4 a,
+	.off-canvas.menu ul#list:hover > li:focus h4 a,
+	.off-canvas.menu ul#list:hover > li:hover h4 a {
+		color: #212121;
+
+	}
+	.off-canvas.menu ul#list:hover > li.sortable-ghost {
+		opacity: 0.4;
+		-webkit-transform: scale(1.03);
+		transform:scale(1.03);
+		box-shadow: inset 0 0 13rem red;
+		background-color: #008cba;
+	}
+	.off-canvas.menu ul#list > li:hover/* .icon-menu*/ {
+		cursor: move;
+	}
+	.off-canvas.menu ul#list > li hr {opacity: .1;}
+	.off-canvas.menu ul#list > li:first-child hr {opacity: 0;}
+	.off-canvas.menu ul#list > li hr:last-child {opacity: 0;}
+	.off-canvas.menu ul#list > li:last-child hr:last-child {opacity: .1;}
+	{
+		color: #222;
+	}
+	.off-canvas.menu .navod li,
+	.off-canvas.menu .navod h4,
+	.navod [class^="icon-"], .navod [class*=" icon-"] {
+		color: #373737;
+	}
+	/*	.icon-menu,
+	.icon-heart-broken, {
+		font-size: 1.5rem;
+		line-height: 1.3;
+		color: darkgray;
+		text-shadow: 0px 1px rgba(0,0,0,.5);
+		}*/
+		.icon-close {
+			font-size: 75%;
+		}
