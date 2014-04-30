@@ -312,3 +312,35 @@ transform: translate3d(0px, 0, 0);
 	margin: 0 auto;
 	padding: 1.8rem;
 }
+.top-bar,
+.contain-to-grid,
+.top-bar-section .has-form,
+.top-bar-section li:not(.has-form) a:not(.button) {
+	background-color: #3dc89c;
+}
+header.contain-to-grid {
+	border-bottom: 2px solid #2a8b6d;
+	height: 60px;
+}
+.top-bar-section > ul > .divider {
+	border-right: 2px solid #78ceb3;
+	height: 58px;
+}
+.top-bar-section ul {
+	background-color:inherit!important;
+}
+.top-bar-section li:not(.has-form) a:hover:not(.button) {
+	background-color: #2a8b6d;
+}
+a.menu, .top-bar li a:not(.button) {
+	height: 58px;
+	line-height: 45px;
+}
+.top-bar li a:not(.button):not(.menu) {
+	padding-top:5px!important;
+}
+.arrow-cesta {
+	font-weight: bold;
+	font-size: 2em;
+	margin-left:5px;
+}
