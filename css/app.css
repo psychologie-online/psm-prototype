@@ -439,3 +439,124 @@ nav.top-bar,
 	width: 100%;
 	margin-top: 0px;
 }
+/* Sidebar
+*/
+.mep-sidebar {
+	background: #f6f4e8;
+	border-left: 1px solid #e2e3dd;
+	border-right: 1px solid #e2e3dd;
+}
+.mep-sidebar:before {
+    position:absolute;
+    content: "";
+    background:#f6f4e8;
+    left:-1000px;
+    width:999px;
+    height:1000%;
+    z-index:-999;
+}
+.mep-sidebar:after {
+    position:absolute;
+    content: "";
+    background:#f6f4e8;
+    left: -1px;
+    width:100%;
+    height:1000%;
+    border-left: 1px solid #e2e3dd;
+	border-right: 1px solid #e2e3dd;
+	box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    z-index:-999;
+}
+.mep-sidebar h1 {
+    font-weight: normal;
+    font-size: 2em;
+    text-transform: none;
+    text-decoration: underline;
+    color: #5C6D7A;
+    line-height: 120%;
+    margin-top:3rem;
+}
+.mep-sidebar h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom:0px;
+    font-weight:bold;
+}
+.mep-sidebar p {
+	font-size: 0.9rem;
+	line-height: 130%;
+}
+.mep-sidebar .button {
+    background: #ec6744;
+    box-shadow: 0px 3px 0px #7d1200;
+    border-radius:5px;
+    padding-bottom:0.8rem;
+    -webkit-transition: 100ms ease-out;
+  	-moz-transition: 100ms ease-out;
+  	transition: 100ms ease-out;
+  	margin-bottom:5em;
+}
+.mep-sidebar .button:hover {
+    box-shadow: 0px 0px 0px #7d1200;
+    -webkit-transform: translate(0, 3px);
+    -moz-transform: translate(0, 3px);
+    -o-transform: translate(0, 3px);
+    transform: translate(0, 3px);
+    -webkit-transition: 100ms ease-out;
+  	-moz-transition: 100ms ease-out;
+  	transition: 100ms ease-out;
+}
+img.mep-demo {
+	margin-top: -5px;
+}
+.mep-sidebar a:not(.button) {
+	color: #ec6744;
+	text-decoration: underline;
+}
+.mep-sidebar a:hover:not(.button) {
+	text-decoration: none;
+}
+/* Footer
+*/
+div.mep-footer {
+	border-top: 1px solid #e2e3dd;
+    background: #ededed;
+    height: 120px;
+    z-index: 999;
+}
+div.mep-footer:before {
+    background: #ededed;
+    border-top: 1px solid #e2e3dd;
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 120px;
+    z-index: -999;
+}
+.footer-headline {
+	margin-top: 10px;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+.mep-footer ul {
+	margin-bottom: 0px;
+	line-height: 1.3;
+	font-size:0.9em;
+}
+.mep-footer li a {
+	color: #5C6D7A;
+	text-decoration: underline;
+}
+.mep-branding {
+	height: 100%;
+}
+.mep-branding p {
+	color: #bbbcb8;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	margin-bottom: 10px;
+}
