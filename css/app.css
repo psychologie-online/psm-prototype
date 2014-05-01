@@ -312,6 +312,8 @@ transform: translate3d(0px, 0, 0);
 	margin: 0 auto;
 	padding: 1.8rem;
 }
+/* Header Customization
+*/
 .top-bar,
 .contain-to-grid,
 .top-bar-section .has-form,
@@ -332,6 +334,12 @@ header.contain-to-grid {
 .top-bar-section li:not(.has-form) a:hover:not(.button) {
 	background-color: #2a8b6d;
 }
+.top-bar-section li:not(.has-form) a:not(.button),
+.top-bar-section li:not(.has-form) a:hover:not(.button) {
+	-webkit-transition: background-color 300ms ease-out;
+  	-moz-transition: background-color 300ms ease-out;
+  	transition: background-color 300ms ease-out;
+  }
 a.menu, .top-bar li a:not(.button) {
 	height: 58px;
 	line-height: 45px;
@@ -342,5 +350,92 @@ a.menu, .top-bar li a:not(.button) {
 .arrow-cesta {
 	font-weight: bold;
 	font-size: 2em;
-	margin-left:5px;
+	margin-left: 5px;
+}
+.searchbox {
+	border: 1px solid #2a8b6d;
+    border-radius: 4px;
+    height: 40px;
+    margin-top: 9px;
+    width:240px;
+}
+.searchbox input[type="text"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: rgba(255,255,255,1);
+    margin-top: -6px;
+    width: 200px;
+}
+.searchbox input[type="text"]:focus {
+    background: none;
+    box-shadow: none;
+ 	color: rgba(255,255,255,1);
+}
+.searchbox .button {
+    background:none;
+    float: right;
+    margin-right:5px;
+    margin-top:-3px;
+    padding-bottom: 0.45rem;
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
+}
+.searchbox:hover .button {
+    background: #2a8b6d;
+}
+/* Placeholder Color
+	- http://css-tricks.com/snippets/css/style-placeholder-text/
+*/
+::-webkit-input-placeholder {
+   color: rgba(255,255,255,0.5);
+   opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255,255,255,0.5);
+   opacity: 1;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(255,255,255,0.5);
+   opacity: 1;
+}
+:-ms-input-placeholder {  
+   color: rgba(255,255,255,0.5);
+   opacity: 1;
+}
+/* Responsive menu fix
+*/
+nav.top-bar,
+.top-bar .title-area {
+	height: 58px;
+}
+.top-bar.expanded .title-area {
+	height: 60px;
+	background:#2a8b6d;
+}
+.top-bar.expanded .toggle-topbar a:after {
+	box-shadow: 0px 10px 0px 1px #FFF, 0px 16px 0px 1px #FFF, 0px 22px 0px 1px #FFF
+}
+.top-bar .toggle-topbar.menu-icon a,
+.top-bar.expanded .toggle-topbar a {
+	color: #FFF;
+	line-height: 22px;
+}
+.top-bar.expanded .searchbox input[type="text"] {
+	margin-top: inherit;
+}
+.top-bar.expanded .searchbox .button {
+	margin-top: 4px;
+}
+.top-bar.expanded .divider {
+	height: inherit;
+	border-top: 1px solid #78ceb3;
+}
+.top-bar.expanded a.menu {
+	height: auto;
+}
+.top-bar.expanded .searchbox,
+.top-bar.expanded .searchbox input[type="text"] {
+	width: 100%;
+	margin-top: 0px;
 }
