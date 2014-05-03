@@ -176,8 +176,8 @@ $(document).ready(function() {
 
 // Refresh the order everytime the item is dragged & dropped, added or deleted
 my_srt_list.addEventListener("dragend", getOrder, false);
-$(add_to_sidebar).on("click", getOrder);
-$(remove_from_sidebar).on("click", getOrder);
+$(add_to_sidebar).on("click", getOrder, false);
+$(remove_from_sidebar).on("click", getOrder, false);
 
 restoreCookie();
 });
