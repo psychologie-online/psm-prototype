@@ -568,7 +568,7 @@ div.mep-footer {
 .mep-footer ul {
 	margin-bottom: 0px;
 	line-height: 1.3;
-	font-size:0.9em;
+	font-size: 0.9em;
 }
 .mep-footer li a {
 	color: #5C6D7A;
@@ -585,4 +585,27 @@ div.mep-footer {
 	right: 0px;
 	bottom: 0px;
 	margin-bottom: 10px;
+}
+/* Experimenty výpis v kategorii
+*/
+.experiments { /* wrapping div */
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.experiment {
+	border-bottom: 2px solid #e2e3dd;
+}
+.experiment p {
+	font-size: 0.8em;
+}
+.experiment h3 {
+	margin-top: 3rem;
+	font-size: 1.5em;
+}
+.experiment a {
+    color:#5C6D7A;
+    text-decoration: underline;
+}
+.experiment a:hover {
+    text-decoration: none;
 }
