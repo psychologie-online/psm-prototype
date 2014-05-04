@@ -33,7 +33,7 @@ function getOrder() {
 							return element.dataset.sortableId; // [data-sortable-id]
 						});
 
-		// Update the number indicating the quantity of items added in sidebar
+		// Update the number indicating the quantity of items added to the sidebar
 		quantity = $(".sortable.item").length;
 
 		if( quantity < 1 ) {
@@ -46,6 +46,7 @@ function getOrder() {
 		console.log("Počet položek: " + quantity);
 		console.log("IDs: " + IDs);
 
+		// Uložit pořadí do cookies pokaždý, když je vyvolaná funknce getOrder
 		storeCookie();
 
 		return false;
