@@ -18,7 +18,7 @@ function openMenu(){
 	$('.wrap, .contain-to-grid').addClass('menu-open');
 	setTimeout(function(){
 		$('aside.menu').css('z-index', 2000);
-			$(".sortable.item:first-child").delay(500).removeClass( "highlight" ); // Highlight new added item
+			$(".sortable.item").delay(500).removeClass( "highlight" ); // Highlight new added item
 		}, 300);
 }
 function closeMenu(){
@@ -33,8 +33,8 @@ function getOrder() {
 							return element.dataset.sortableId; // [data-sortable-id]
 						});
 
-		// Update the number indicating the quantity of items added in sidebar
-		quantity = $(".sortable.item").length + 1;
+		// Update the number indicating the quantity of items added to the sidebar
+		quantity = $(".sortable.item").length;
 
 		if( quantity < 1 ) {
 			$("#quantity").fadeOut();
@@ -46,7 +46,10 @@ function getOrder() {
 		console.log("Počet položek: " + quantity);
 		console.log("IDs: " + IDs);
 
+		// Uložit pořadí do cookies pokaždý, když je vyvolaná funknce getOrder
 		storeCookie();
+
+		return false;
 	}
 
 
@@ -102,7 +105,6 @@ function storeCookie() {
 	var cookies = $.cookie("order");
 	console.log("Saved cookie ORDER: " + cookies);
 }
-
 // http://stackoverflow.com/questions/15353244/jquery-ui-sortable-and-js-cookie
 function restoreCookie() {
 
@@ -114,18 +116,14 @@ function restoreCookie() {
 	var SavedID = cookies.split(',');
 	for ( var u=0, ul=SavedID.length; u < ul; u++ ) {
 		SavedID[u] = SavedID[u].split(',');
+
+		console.log("SavedID: " + SavedID);
 	}
-	console.log("SavedID: " + SavedID);
+	for (var Sitem=0, n = SavedID.length; Sitem < n; Sitem++) {
 
-	for (var Scolumn=0, n = SavedID.length; Scolumn < n; Scolumn++) {
-		for (var Sitem=0, m = SavedID[Scolumn].length; Sitem < m; Sitem++) {
-			prependItem();
+		prependItem();
 
-			// console.log("Scolumn: " + Scolumn);
-			// console.log("Sitem: " + Sitem);
-		}
-
-
+		console.log("Sitem: " + Sitem);
 	}
 }
 
@@ -134,6 +132,9 @@ function restoreCookie() {
 // Executions
 
 $(document).ready(function() {
+
+// načte cookies jako první
+restoreCookie();
 
 // (OPEN & CLOSE) SIDEBAR
 	// Click anywhere to close sidebar
@@ -150,34 +151,35 @@ $(document).ready(function() {
 
 	// Menu link sidebar
 	$('a.menu').click (function(e){
-		e.preventDefault(); // Zabraňuje při kliknutí na odkaz vrácení na začátek stránky tzn. zabraňuje akci odkazu.
-		e.stopPropagation();
+
 		if( $('.wrap').hasClass('menu-open') ){
 			closeMenu();
 		} else {
 			openMenu();
-
 		}
+
+		// e.preventDefault();
+		// e.stopPropagation();
+		return false;
 	});
 
-// (ADD TO) SIDEBAR
-	// Pokud experiment ve výběru již figuruje, znemožnit jeho opětovné přidání
+// ADD to & REMOVE from SIDEBAR
+	// #11 https://github.com/psychologie-online/psm-prototype/issues/11
 	// Položky s možností přidání do výběru musejí mít unikátní manuálně nastavené ID -> var exp_ID = [data-exp-id]
 	$(add_to_sidebar).on("click", function(e) {
-		e.preventDefault();
-
 		prependItem();
 		openMenu();
 	});
 
-	$(".icon-close").click (function(e) {
+	$(remove_from_sidebar).on("click", function(e) {
 		$(e.target).parents('.sortable.item').remove();
+		// console.log("Number of icon-close: " + remove_from_sidebar.length);
+		console.log("Sortable item removed from sidebar.");
 	});
 
 // Refresh the order everytime the item is dragged & dropped, added or deleted
-my_srt_list.addEventListener("dragend", getOrder, false);
+my_srt_list.addEventListener("dragend", getOrder);
 $(add_to_sidebar).on("click", getOrder);
 $(remove_from_sidebar).on("click", getOrder);
 
-restoreCookie();
 });
