@@ -18,7 +18,7 @@ function openMenu(){
 	$('.wrap, .contain-to-grid').addClass('menu-open');
 	setTimeout(function(){
 		$('aside.menu').css('z-index', 2000);
-			$(".sortable.item:first-child").delay(500).removeClass( "highlight" ); // Highlight new added item
+			$(".sortable.item").delay(500).removeClass( "highlight" ); // Highlight new added item
 		}, 300);
 }
 function closeMenu(){
@@ -34,7 +34,7 @@ function getOrder() {
 						});
 
 		// Update the number indicating the quantity of items added in sidebar
-		quantity = $(".sortable.item").length + 1;
+		quantity = $(".sortable.item").length;
 
 		if( quantity < 1 ) {
 			$("#quantity").fadeOut();
@@ -104,7 +104,6 @@ function storeCookie() {
 	var cookies = $.cookie("order");
 	console.log("Saved cookie ORDER: " + cookies);
 }
-
 // http://stackoverflow.com/questions/15353244/jquery-ui-sortable-and-js-cookie
 function restoreCookie() {
 
@@ -116,18 +115,14 @@ function restoreCookie() {
 	var SavedID = cookies.split(',');
 	for ( var u=0, ul=SavedID.length; u < ul; u++ ) {
 		SavedID[u] = SavedID[u].split(',');
+
+		console.log("SavedID: " + SavedID);
 	}
-	console.log("SavedID: " + SavedID);
+	for (var Sitem=0, n = SavedID.length; Sitem < n; Sitem++) {
 
-	for (var Scolumn=0, n = SavedID.length; Scolumn < n; Scolumn++) {
-		for (var Sitem=0, m = SavedID[Scolumn].length; Sitem < m; Sitem++) {
-			prependItem();
+		prependItem();
 
-			// console.log("Scolumn: " + Scolumn);
-			// console.log("Sitem: " + Sitem);
-		}
-
-
+		console.log("Sitem: " + Sitem);
 	}
 }
 
@@ -167,13 +162,12 @@ restoreCookie();
 		return false;
 	});
 
-// (ADD TO) SIDEBAR
-	// Pokud experiment ve výběru již figuruje, znemožnit jeho opětovné přidání
+// ADD to & REMOVE from SIDEBAR
+	// #11 https://github.com/psychologie-online/psm-prototype/issues/11
 	// Položky s možností přidání do výběru musejí mít unikátní manuálně nastavené ID -> var exp_ID = [data-exp-id]
 	$(add_to_sidebar).on("click", function(e) {
 		prependItem();
 		openMenu();
-
 	});
 
 	$(remove_from_sidebar).on("click", function(e) {
