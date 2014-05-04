@@ -47,6 +47,8 @@ function getOrder() {
 		console.log("IDs: " + IDs);
 
 		storeCookie();
+
+		return false;
 	}
 
 
@@ -150,34 +152,35 @@ $(document).ready(function() {
 
 	// Menu link sidebar
 	$('a.menu').click (function(e){
-		e.preventDefault(); // Zabraňuje při kliknutí na odkaz vrácení na začátek stránky tzn. zabraňuje akci odkazu.
-		e.stopPropagation();
+
 		if( $('.wrap').hasClass('menu-open') ){
 			closeMenu();
 		} else {
 			openMenu();
-
 		}
+
+		// e.preventDefault();
+		// e.stopPropagation();
+		return false;
 	});
 
 // (ADD TO) SIDEBAR
 	// Pokud experiment ve výběru již figuruje, znemožnit jeho opětovné přidání
 	// Položky s možností přidání do výběru musejí mít unikátní manuálně nastavené ID -> var exp_ID = [data-exp-id]
 	$(add_to_sidebar).on("click", function(e) {
-		e.preventDefault();
-
 		prependItem();
 		openMenu();
+
 	});
 
-	$(".icon-close").click (function(e) {
+	$(remove_from_sidebar).click (function(e) {
 		$(e.target).parents('.sortable.item').remove();
 	});
 
 // Refresh the order everytime the item is dragged & dropped, added or deleted
-my_srt_list.addEventListener("dragend", getOrder, false);
-$(add_to_sidebar).on("click", getOrder, false);
-$(remove_from_sidebar).on("click", getOrder, false);
+my_srt_list.addEventListener("dragend", getOrder);
+$(add_to_sidebar).on("click", getOrder);
+$(remove_from_sidebar).on("click", getOrder);
 
 restoreCookie();
 });
