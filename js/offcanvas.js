@@ -137,6 +137,9 @@ function restoreCookie() {
 
 $(document).ready(function() {
 
+// načte cookies jako první
+restoreCookie();
+
 // (OPEN & CLOSE) SIDEBAR
 	// Click anywhere to close sidebar
 	$(document).click (function(e) {
@@ -173,8 +176,10 @@ $(document).ready(function() {
 
 	});
 
-	$(remove_from_sidebar).click (function(e) {
+	$(remove_from_sidebar).on("click", function(e) {
 		$(e.target).parents('.sortable.item').remove();
+		// console.log("Number of icon-close: " + remove_from_sidebar.length);
+		console.log("Sortable item removed from sidebar.");
 	});
 
 // Refresh the order everytime the item is dragged & dropped, added or deleted
@@ -182,5 +187,4 @@ my_srt_list.addEventListener("dragend", getOrder);
 $(add_to_sidebar).on("click", getOrder);
 $(remove_from_sidebar).on("click", getOrder);
 
-restoreCookie();
 });
