@@ -595,11 +595,11 @@ div.mep-footer {
 	padding-right: 0px;
 }
 .experiments [class*="column"] + [class*="column"]:last-child {
-    float:left;
+    float: left;
 }
 .experiment {
 	border-bottom: 1px solid #e2e3dd;
-	padding-bottom:3rem;
+	padding-bottom: 3rem;
 	-webkit-transition: 500ms;
     -moz-transition: 500ms;
     transition: 500ms;
@@ -618,7 +618,7 @@ div.mep-footer {
 	font-size: 1.5em;
 }
 .experiment a {
-    color:#5C6D7A;
+    color: #5C6D7A;
     text-decoration: underline;
 }
 .experiment a:hover {
@@ -628,8 +628,8 @@ div.mep-footer {
     margin-top: 3em;
 }
 .experiment img {
-    float:left;
-    margin-top:3rem;
+    float: left;
+    margin-top: 3rem;
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 10px;
@@ -638,4 +638,43 @@ div.mep-footer {
 }
 @media only screen and (max-width: 40.063em) {
 	.experiment img {display: none;}
+}
+/* Katalog
+*/
+.katalog-2 {
+	margin-bottom: 0px;
+}
+.katalog-1 h1,
+.katalog-2 h2,
+.katalog-3 h2 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: normal;
+    text-decoration: none;
+    color: #222;
+    line-height: 120%;
+    margin-top: 3rem;
+}
+.katalog-1 a:not(.button),
+.katalog-2 a:not(.button),
+.katalog-3 a:not(.button){
+    color: #5C6D7A;
+    text-decoration: underline;
+}
+.katalog-1 a:hover:not(.button),
+.katalog-2 a:hover:not(.button),
+.katalog-3 a:hover:not(.button){
+    text-decoration: none;
+}
+.katalog-1 ul {
+    list-style: none;
+    font-size: 1.8rem;
+}
+.katalog-1 li {
+    text-shadow: 1px 1px 0px #fff;
+}
+.katalog-2 ul,
+.katalog-3 ul{
+    list-style: none;
+    font-size: 1.4rem;
 }
