@@ -546,6 +546,8 @@ img.mep-demo {
 @media only screen and (max-width: 40.063em) {
     .mep-sidebar:after {
         background: #fff;
+        border-right: none;
+        border-left: none;
     }
 }
 /* Footer
@@ -592,8 +594,21 @@ div.mep-footer {
 	padding-left: 0px;
 	padding-right: 0px;
 }
+.experiments [class*="column"] + [class*="column"]:last-child {
+    float:left;
+}
 .experiment {
-	border-bottom: 2px solid #e2e3dd;
+	border-bottom: 1px solid #e2e3dd;
+	padding-bottom:3rem;
+	-webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    transition: 500ms;
+}
+.experiment:hover {
+    background:rgba(0,0,0,0.05);
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    transition: 500ms;
 }
 .experiment p {
 	font-size: 0.8em;
@@ -608,4 +623,19 @@ div.mep-footer {
 }
 .experiment a:hover {
     text-decoration: none;
+}
+.experiment .add {
+    margin-top: 3em;
+}
+.experiment img {
+    float:left;
+    margin-top:3rem;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    width: 130px;
+    height: auto;
+}
+@media only screen and (max-width: 40.063em) {
+	.experiment img {display: none;}
 }
