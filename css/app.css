@@ -833,7 +833,8 @@ div.mep-footer {
 	}
 }
 .claimbox {
-	background: url(../img/kolaz1.png) #f6f4e8 no-repeat;
+
+	background-size: 100%;
 	height:278px;
 }
 .intro-wrap {
@@ -855,5 +856,8 @@ div.mep-footer {
 }
 .homepagewrap {
 	width: 100%;
-	background: #f6f4e8;
+	background-color: #f6f4e8;
+	background: url(../img/kolaz1.png) #f6f4e8 no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
 }
