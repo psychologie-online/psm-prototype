@@ -30,7 +30,7 @@ div.wrap {
 	overflow: hidden;
 }
 
-.cesty-quantity {
+.cesty-quantity { /*počítadlo*/
 	background-color: #c0392b;
 	border-radius: 10px;
 	color: white;
@@ -203,10 +203,12 @@ transform: translate3d(0px, 0, 0);
 	background-color: rgba(0, 0, 0, .3);
 	box-shadow: 0px 3px 0px rgba(0, 0, 0, .6);
 	border-radius: 5px;
+	-webkit-transition: all 50ms ease-out 0s;
 	transition: all 50ms ease-out 0s;
 }
 .off-canvas.menu a.button:hover {
 	box-shadow: none;
+	-webkit-transform: translate(0px, 3px);
 	transform: translate(0px, 3px);
 }
 
@@ -223,10 +225,11 @@ transform: translate3d(0px, 0, 0);
 	width: 100%;
 }
 .cesta {
-	overflow: hidden;
+	/*	overflow: hidden;*/
 }
 .cesta .wrap {
 	padding: 45px 0;
+	background-color: whitesmoke;
 }
 .cesta header,
 .cesta footer {
@@ -274,7 +277,7 @@ transform: translate3d(0px, 0, 0);
 /* 	Vertical centering
 	– http://www.vanseodesign.com/css/vertical-centering/
 	– http://codepen.io/shshaw/full/gEiDt
-	*/
+
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -286,7 +289,9 @@ transform: translate3d(0px, 0, 0);
 	max-width: 65rem;
 	padding: 1.8rem;
 	margin: auto;
-	overflow: auto;
+	overflow: auto;	*/
+
+	padding: 5rem 0;
 }
 .cesta .obsah p,
 .cesta .obsah h6 {
@@ -294,13 +299,24 @@ transform: translate3d(0px, 0, 0);
 }
 .cesta .panel {
 	border: none;
-	background-color: rgba(0,0,0,.05);
+	background-color: white;
 	max-width: 50rem;
 	margin: 0 auto;
 	padding: 1.8rem;
 }
-/* Header Customization
-*/
+.cesta .progress {
+	border: 1px solid #FFF;
+	height: 46px;
+	background-color: whitesmoke;
+}
+.cesta .progress .meter {
+	border: 1px solid #3DC89C;
+	background-color: white;
+}
+
+
+
+/*	Header Customization  */
 .top-bar,
 .contain-to-grid,
 .top-bar-section .has-form,
