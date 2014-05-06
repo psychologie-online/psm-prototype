@@ -24,10 +24,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-li:focus [class^="icon-"], li:focus [class*=" icon-"],
-li:hover [class^="icon-"], li:hover [class*=" icon-"] {
-	text-shadow: 1px 2px 4px #008CBA, 0px 0px 0px #000, 1px 2px 4px #008CBA;
-}
+
 /* Don't show shadows when selecting text */
 /*::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
 ::selection { background: #5af; color: #fff; text-shadow: none; }

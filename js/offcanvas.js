@@ -61,24 +61,24 @@ function prependItem() {
 
 	var new_srt_list_item	="";
 	new_srt_list_item  += "<li data-sortable-id=\"" + exp_ID + "\" class=\"sortable item highlight\">";
-	new_srt_list_item  += "  <hr>";
+	// new_srt_list_item  += "  <hr>";
 	new_srt_list_item  += "  <div class=\"row\">";
-	new_srt_list_item  += "    <div class=\"medium-1 columns text-center\">";
-	new_srt_list_item  += "      <span class=\"icon-menu\"><\/span><span class=\"mls\"><\/span>";
-	new_srt_list_item  += "    <\/div>";
-	new_srt_list_item  += "    <div class=\"medium-1 columns text-center\">";
-	new_srt_list_item  += "      <input type=\"checkbox\" name=\"cesta\" value=\"ano\">";
-	new_srt_list_item  += "      <label class=\"green-border\" for=\"a\"><\/label>";
-	new_srt_list_item  += "    <\/div>";
-	new_srt_list_item  += "    <div class=\"medium-8 columns\">";
+	// new_srt_list_item  += "    <div class=\"small-1 columns text-center\">";
+	// new_srt_list_item  += "      <span class=\"icon-menu\"><\/span><span class=\"mls\"><\/span>";
+	// new_srt_list_item  += "    <\/div>";
+	// new_srt_list_item  += "    <div class=\"small-1 columns text-center\">";
+	// new_srt_list_item  += "      <input type=\"checkbox\" name=\"cesta\" value=\"ano\">";
+	// new_srt_list_item  += "      <label class=\"green-border\" for=\"a\"><\/label>";
+	// new_srt_list_item  += "    <\/div>";
+	new_srt_list_item  += "    <div class=\"small-9 small-offset-1 columns\">";
 	new_srt_list_item  += "      <h4><a href=\"\">" + exp_name + "<\/a><\/h4>";
 	new_srt_list_item  += "      <p>" + exp_text + "<\/p>";
 	new_srt_list_item  += "    <\/div>";
-	new_srt_list_item  += "    <div class=\"medium-2 columns text-center\">";
+	new_srt_list_item  += "    <div class=\"small-2 columns text-center\">";
 	new_srt_list_item  += "      <span class=\"icon-close\"><\/span><span class=\"mls\"><\/span>";
 	new_srt_list_item  += "    <\/div>";
 	new_srt_list_item  += "  <\/div>";
-	new_srt_list_item  += "  <hr>";
+	// new_srt_list_item  += "  <hr>";
 	new_srt_list_item  += "<\/li>";
 
 	// console.log(new_srt_list_item);
