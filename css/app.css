@@ -678,3 +678,167 @@ div.mep-footer {
     list-style: none;
     font-size: 1.4rem;
 }
+/* Homepage
+*/
+.e-intro
+{
+width:100px;
+height:100px;
+background:url(../img/mep3.svg) no-repeat;
+background-size: 100px 100px;
+position:relative;
+display: inline-block;
+animation:rotation 0.7s 1 ease-in-out;
+-webkit-animation:rotation 0.7s 1 ease-in-out; /*Safari and Chrome*/
+-moz-animation:rotation 0.7s 1 ease-in-out; /*Firefox*/
+-o-animation:rotation 0.7s 1 ease-in-out; /*Opera*/
+}
+@keyframes rotation
+{
+from {
+	left:300px;
+	transform:rotate(360deg);
+	-ms-transform:rotate(360deg); /* IE 9 */
+	-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
+	-moz-transform:rotate(360deg); /* Firefox */
+	-o-transform:rotate(360deg); /* Opera*/
+}
+to {
+	left:0px;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); /* IE 9 */
+	-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
+	-moz-transform:rotate(0deg); /* Firefox */
+	-o-transform:rotate(0deg); /* Opera*/
+}
+}
+@-webkit-keyframes rotation /*Safari and Chrome*/
+{
+from {
+	left:300px;
+	transform:rotate(360deg);
+	-ms-transform:rotate(360deg); /* IE 9 */
+	-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
+	-moz-transform:rotate(360deg); /* Firefox */
+	-o-transform:rotate(360deg); /* Opera*/
+}
+to {
+	left:0px;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); /* IE 9 */
+	-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
+	-moz-transform:rotate(0deg); /* Firefox */
+	-o-transform:rotate(0deg); /* Opera*/
+}
+}
+@-moz-keyframes rotation /*Firefox*/
+{
+from {
+	left:300px;
+	transform:rotate(360deg);
+	-ms-transform:rotate(360deg); /* IE 9 */
+	-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
+	-moz-transform:rotate(360deg); /* Firefox */
+	-o-transform:rotate(360deg); /* Opera*/
+}
+to {
+	left:0px;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); /* IE 9 */
+	-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
+	-moz-transform:rotate(0deg); /* Firefox */
+	-o-transform:rotate(0deg); /* Opera*/
+}
+}
+@-o-keyframes rotation /*Opera*/
+{
+from {
+	left:300px;
+	transform:rotate(360deg);
+	-ms-transform:rotate(360deg); /* IE 9 */
+	-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
+	-moz-transform:rotate(360deg); /* Firefox */
+	-o-transform:rotate(360deg); /* Opera*/
+}
+to {
+	left:0px;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); /* IE 9 */
+	-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
+	-moz-transform:rotate(0deg); /* Firefox */
+	-o-transform:rotate(0deg); /* Opera*/
+}
+}
+.mep-intro
+{
+position:relative;
+display: inline-block;
+overflow: hidden;
+height: 100px;
+padding-top: 25px;
+animation:mepintro 1.5s 1 ease-in-out;
+-webkit-animation:mepintro 1.5s 1 ease-in-out; /*Safari and Chrome*/
+-moz-animation:mepintro 1.5s 1 ease-in-out; /*Firefox*/
+-o-animation:mepintro 1.5s 1 ease-in-out; /*Opera*/
+}
+@keyframes mepintro
+{
+from {
+	text-indent: -9999px;
+}
+to {
+	text-indent: 0px;
+}
+}
+@-webkit-keyframes mepintro /*Safari and Chrome*/
+{
+from {
+	text-indent: -9999px;
+}
+to {
+	text-indent: 0px;
+}
+}
+@-moz-keyframes mepintro /*Firefox*/
+{
+from {
+	text-indent: -9999px;
+}
+to {
+	text-indent: 0px;
+}
+}
+@-o-keyframes mepintro /*Opera*/
+{
+from {
+	text-indent: -9999px;
+}
+to {
+	text-indent: 0px;
+}
+}
+.claimbox {
+	background: url(../img/kolaz1.png) #f6f4e8 no-repeat;
+    height:278px;
+}
+.intro-wrap {
+	margin: auto;
+	margin-top: 30px;
+	text-align: center;
+}
+.mep-intro p {
+    margin-bottom: 0px;
+    line-height: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    color: #222;
+}
+.intro-wrap h2 {
+	margin-top:40px;
+	text-shadow: 1px 1px 0px #fff;
+
+}
+.homepagewrap {
+    width: 100%;
+    background: #f6f4e8;
+}
