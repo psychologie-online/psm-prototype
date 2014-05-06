@@ -53,31 +53,12 @@ div.wrap {
 .cesta header {
 
 	/* Super-compliant Transition :) */
--webkit-transition: -moz-transform 0.22s ease-in-out;
--moz-transition: -moz-transform 0.22s ease-in-out;
--ms-transition: -moz-transform 0.22s ease-in-out;
--o-transition: -moz-transform 0.22s ease-in-out;
-transition: -moz-transform 0.22s ease-in-out;
--webkit-transition: -o-transform 0.22s ease-in-out;
--moz-transition: -o-transform 0.22s ease-in-out;
--ms-transition: -o-transform 0.22s ease-in-out;
--o-transition: -o-transform 0.22s ease-in-out;
-transition: -o-transform 0.22s ease-in-out;
 -webkit-transition: -webkit-transform 0.22s ease-in-out;
--moz-transition: -webkit-transform 0.22s ease-in-out;
--ms-transition: -webkit-transform 0.22s ease-in-out;
--o-transition: -webkit-transform 0.22s ease-in-out;
 transition: -webkit-transform 0.22s ease-in-out;
--webkit-transition: transform 0.22s ease-in-out;
--moz-transition: transform 0.22s ease-in-out;
--ms-transition: transform 0.22s ease-in-out;
--o-transition: transform 0.22s ease-in-out;
+-webkit-transition: -webkit-transform 0.22s ease-in-out;
 transition: transform 0.22s ease-in-out;
 
 -webkit-transform: translate3d(0px, 0, 0);
--moz-transform: translate3d(0px, 0, 0);
--ms-transform: translate3d(0px, 0, 0);
--o-transform: translate3d(0px, 0, 0);
 transform: translate3d(0px, 0, 0);
 
 }
@@ -85,18 +66,12 @@ transform: translate3d(0px, 0, 0);
 .wrap.menu-open,
 .contain-to-grid.menu-open {
 	-webkit-transform: translate3d(-25rem, 0, 0);
-	-moz-transform: translate3d(-25rem, 0, 0);
-	-ms-transform: translate3d(-25rem, 0, 0);
-	-o-transform: translate3d(-25rem, 0, 0);
 	transform: translate3d(-25rem, 0, 0);
 }
 .cesta .wrap.menu-open,
 .cesta footer.menu-open,
 .cesta header.menu-open {
 	-webkit-transform: translate3d(15rem, 0, 0);
-	-moz-transform: translate3d(15rem, 0, 0);
-	-ms-transform: translate3d(15rem, 0, 0);
-	-o-transform: translate3d(15rem, 0, 0);
 	transform: translate3d(15rem, 0, 0);
 }
 .menu-open li:not(.has-form) a:not(.button).menu,
@@ -113,7 +88,6 @@ transform: translate3d(0px, 0, 0);
 	padding: 1.5rem;
 	padding-left: 0;
 	padding-top: 0;
-	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	overflow: scroll;
@@ -125,9 +99,6 @@ transform: translate3d(0px, 0, 0);
 	.wrap.menu-open,
 	.contain-to-grid.menu-open {
 		-webkit-transform: translate3d(-17rem, 0, 0);
-		-moz-transform: translate3d(-17rem, 0, 0);
-		-ms-transform: translate3d(-17rem, 0, 0);
-		-o-transform: translate3d(-17rem, 0, 0);
 		transform: translate3d(-17rem, 0, 0);
 	}
 }
@@ -167,9 +138,6 @@ transform: translate3d(0px, 0, 0);
 .off-canvas.menu ul#list {
 	text-align: left;
 	-webkit-transition: all 400ms ease-in-out;
-	-moz-transition: all 400ms ease-in-out;
-	-ms-transition: all 400ms ease-in-out;
-	-o-transition: all 400ms ease-in-out;
 	transition: all 400ms ease-in-out;
 }
 .off-canvas.menu ul#list > li {
@@ -356,7 +324,6 @@ header.contain-to-grid {
 .top-bar-section li:not(.has-form) a:not(.button),
 .top-bar-section li:not(.has-form) a:hover:not(.button) {
 	-webkit-transition: background-color 300ms ease-out;
-	-moz-transition: background-color 300ms ease-out;
 	transition: background-color 300ms ease-out;
 }
 a.menu, .top-bar li a:not(.button) {
@@ -528,18 +495,14 @@ nav.top-bar,
 	border-radius:5px;
 	padding-bottom:0.8rem;
 	-webkit-transition: 50ms ease-out;
-	-moz-transition: 50ms ease-out;
 	transition: 50ms ease-out;
 	margin-bottom:5em;
 }
 .mep-sidebar .button:hover {
 	box-shadow: 0px 0px 0px #7d1200;
 	-webkit-transform: translate(0, 3px);
-	-moz-transform: translate(0, 3px);
-	-o-transform: translate(0, 3px);
 	transform: translate(0, 3px);
 	-webkit-transition: 50ms ease-out;
-	-moz-transition: 50ms ease-out;
 	transition: 50ms ease-out;
 }
 img.mep-demo {
@@ -616,13 +579,11 @@ div.mep-footer {
 	border-bottom: 1px solid #e2e3dd;
 	padding-bottom: 3rem;
 	-webkit-transition: 500ms;
-	-moz-transition: 500ms;
 	transition: 500ms;
 }
 .experiment:hover {
 	background:rgba(0,0,0,0.05);
 	-webkit-transition: 500ms;
-	-moz-transition: 500ms;
 	transition: 500ms;
 }
 .experiment p {
@@ -746,44 +707,6 @@ div.mep-footer {
 		-o-transform:rotate(0deg); /* Opera*/
 	}
 }
-@-moz-keyframes rotation /*Firefox*/
-{
-	from {
-		left:300px;
-		transform:rotate(360deg);
-		-ms-transform:rotate(360deg); /* IE 9 */
-		-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
-		-moz-transform:rotate(360deg); /* Firefox */
-		-o-transform:rotate(360deg); /* Opera*/
-	}
-	to {
-		left:0px;
-		transform:rotate(0deg);
-		-ms-transform:rotate(0deg); /* IE 9 */
-		-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
-		-moz-transform:rotate(0deg); /* Firefox */
-		-o-transform:rotate(0deg); /* Opera*/
-	}
-}
-@-o-keyframes rotation /*Opera*/
-{
-	from {
-		left:300px;
-		transform:rotate(360deg);
-		-ms-transform:rotate(360deg); /* IE 9 */
-		-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
-		-moz-transform:rotate(360deg); /* Firefox */
-		-o-transform:rotate(360deg); /* Opera*/
-	}
-	to {
-		left:0px;
-		transform:rotate(0deg);
-		-ms-transform:rotate(0deg); /* IE 9 */
-		-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
-		-moz-transform:rotate(0deg); /* Firefox */
-		-o-transform:rotate(0deg); /* Opera*/
-	}
-}
 .mep-intro
 {
 	position:relative;
@@ -806,24 +729,6 @@ div.mep-footer {
 	}
 }
 @-webkit-keyframes mepintro /*Safari and Chrome*/
-{
-	from {
-		text-indent: -9999px;
-	}
-	to {
-		text-indent: 0px;
-	}
-}
-@-moz-keyframes mepintro /*Firefox*/
-{
-	from {
-		text-indent: -9999px;
-	}
-	to {
-		text-indent: 0px;
-	}
-}
-@-o-keyframes mepintro /*Opera*/
 {
 	from {
 		text-indent: -9999px;
