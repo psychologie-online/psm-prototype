@@ -387,7 +387,7 @@ li.name {padding-top: 2px;}
 .searchbox {
 	border: 1px solid #2a8b6d;
 	border-radius: 4px;
-	height: 36px;
+	height: 35px;
 	margin-top: 7px;
 	width:240px;
 }
@@ -520,7 +520,7 @@ nav.top-bar,
 	color: #5C6D7A;
 	line-height: 120%;
 	margin-top:3rem;
-	margin-bottom: 2rem;
+	margin-bottom: 1.1rem;
 	padding-bottom: 2rem;
 	border-bottom: 2px solid #e2e3dd;
 }
@@ -678,6 +678,7 @@ div.mep-footer {
 	margin-bottom: 10px;
 	padding-bottom: inherit;
 }
+.katalog-1 h1 {padding-left:50px;}
 .katalog-1 a:not(.button),
 .katalog-2 a:not(.button),
 .katalog-3 a:not(.button){
@@ -689,12 +690,18 @@ div.mep-footer {
 .katalog-3 a:hover:not(.button){
 	text-decoration: none;
 }
+.katalog-1 {padding:0px;}
 .katalog-1 ul {
 	list-style: none;
-	font-size: 1.8rem;
+	font-size: 32px;
+    margin-left:0px;
+    width:100%;
 }
 .katalog-1 li {
 	text-shadow: 1px 1px 0px #fff;
+    padding: 20px 70px;
+    border-top: 1px solid #e2e3dd;
+    
 }
 .katalog-2 ul,
 .katalog-3 ul{
@@ -790,7 +797,7 @@ div.mep-footer {
 }
 .intro-wrap {
 	margin: auto;
-	margin-top: 30px;
+	margin-top: 45px;
 	text-align: center;
 }
 .mep-intro p {
