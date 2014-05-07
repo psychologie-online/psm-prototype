@@ -23,7 +23,7 @@ header.contain-to-grid {
 div.wrap {
 	min-height: 100%;
 	background: #fff;
-	padding-top:60px;
+	padding-top:50px;
 }
 div.wrap {
 	width: 100%;
@@ -217,13 +217,9 @@ transform: translate3d(0px, 0, 0);
 	background-color: rgba(0, 0, 0, .3);
 	box-shadow: 0px 3px 0px rgba(0, 0, 0, .6);
 	border-radius: 5px;
-	-webkit-transition: all 50ms ease-out 0s;
-	transition: all 50ms ease-out 0s;
 }
 .off-canvas.menu a.button:hover {
 	box-shadow: none;
-	-webkit-transform: translate(0px, 3px);
-	transform: translate(0px, 3px);
 }
 
 .off-canvas.menu .navod li,
@@ -327,9 +323,8 @@ transform: translate3d(0px, 0, 0);
 .cesta .progress .meter {
 	background-color: #3DC89C;
 }
-
-
-
+/* Buttons animations
+*/
 /*	Header Customization  */
 .top-bar,
 .contain-to-grid,
@@ -339,14 +334,14 @@ transform: translate3d(0px, 0, 0);
 }
 header.contain-to-grid {
 	border-bottom: 2px solid #2a8b6d;
-	height: 60px;
+	height: 50px;
 }
 .top-bar-section > ul > .divider {
 	border-right: 2px solid #78ceb3;
-	height: 58px;
+	height: 48px;
 }
 .top-bar-section ul {
-	background-color:inherit!important;
+	background-color: inherit!important;
 }
 .top-bar-section li:not(.has-form) a:hover:not(.button) {
 	background-color: #2a8b6d;
@@ -357,22 +352,29 @@ header.contain-to-grid {
 	transition: background-color 300ms ease-out;
 }
 a.menu, .top-bar li a:not(.button) {
-	height: 58px;
-	line-height: 45px;
+	height: 48px;
+	line-height: 35px;
 }
 .top-bar li a:not(.button):not(.menu) {
-	padding-top:5px!important;
+	padding-top: 3px!important;
+}
+li.name {padding-top: 2px;}
+.top-bar svg,
+.top-bar img {
+	vertical-align: middle;
+	margin-top:-3px;
 }
 .arrow-cesta {
 	font-weight: bold;
 	font-size: 2em;
 	margin-left: 5px;
+	line-height: 100%;
 }
 .searchbox {
 	border: 1px solid #2a8b6d;
 	border-radius: 4px;
-	height: 40px;
-	margin-top: 9px;
+	height: 36px;
+	margin-top: 7px;
 	width:240px;
 }
 .searchbox input[type="text"] {
@@ -380,7 +382,7 @@ a.menu, .top-bar li a:not(.button) {
 	border: none;
 	box-shadow: none;
 	color: rgba(255,255,255,1);
-	margin-top: -6px;
+	margin-top: -9px;
 	width: 200px;
 }
 .searchbox input[type="text"]:focus {
@@ -391,14 +393,18 @@ a.menu, .top-bar li a:not(.button) {
 .searchbox .button {
 	background:none;
 	float: right;
-	margin-right:5px;
-	margin-top:-3px;
-	padding-bottom: 0.45rem;
-	padding-left: 0.45rem;
-	padding-right: 0.45rem;
+	margin-right:2px;
+	margin-top:-5px;
+    padding: 0.45em;
+    padding-bottom: 0.50em;
+	box-shadow: none;
 }
 .searchbox:hover .button {
 	background: #2a8b6d;
+	-webkit-transform: translate(0, 0px);
+	transform: translate(0, 0px);
+	transform: none;
+    box-shadow:none;
 }
 /* Placeholder Color
 	- http://css-tricks.com/snippets/css/style-placeholder-text/
@@ -423,10 +429,10 @@ a.menu, .top-bar li a:not(.button) {
 */
 nav.top-bar,
 .top-bar .title-area {
-	height: 58px;
+	height: 48px;
 }
 .top-bar.expanded .title-area {
-	height: 60px;
+	height: 50px;
 	background:#2a8b6d;
 }
 .top-bar.expanded .toggle-topbar a:after {
@@ -437,6 +443,7 @@ nav.top-bar,
 	color: #FFF;
 	line-height: 22px;
 }
+.top-bar.expanded .columns {height: 48px;}
 .top-bar.expanded .searchbox input[type="text"] {
 	margin-top: inherit;
 }
@@ -496,10 +503,12 @@ nav.top-bar,
 	font-weight: normal;
 	font-size: 2em;
 	text-transform: none;
-	text-decoration: underline;
 	color: #5C6D7A;
 	line-height: 120%;
 	margin-top:3rem;
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 2px solid #e2e3dd;
 }
 .add {
 	float:right;
@@ -519,23 +528,26 @@ nav.top-bar,
 	font-size: 0.9rem;
 	line-height: 130%;
 }
-.mep-sidebar .button {
+a.button {
 	background: #ec6744;
 	box-shadow: 0px 3px 0px #7d1200;
 	border-radius:5px;
 	padding-bottom:0.8rem;
-	-webkit-transition: 50ms ease-out;
-	transition: 50ms ease-out;
 	margin-bottom:5em;
+	-webkit-transition: 70ms ease-out;
+	transition: 70ms ease-out;
 }
-.mep-sidebar .button:hover {
+a.button:hover {
 	box-shadow: 0px 0px 0px #7d1200;
+	background: #ec6744;
 	-webkit-transform: translate(0, 3px);
 	transform: translate(0, 3px);
-	-webkit-transition: 50ms ease-out;
-	transition: 50ms ease-out;
+	-webkit-transition: 70ms ease-out;
+	transition: 70ms ease-out;
 }
-img.mep-demo {
+.button svg {vertical-align: middle; }
+.button svg,
+image.mep-demo {
 	margin-top: -5px;
 }
 .mep-sidebar a:not(.button) {
@@ -546,55 +558,39 @@ img.mep-demo {
 	text-decoration: none;
 }
 .mep-content {
-	margin-bottom: 240px;
+	margin-bottom: 150px;
 	background: #fff;
 	padding-left: 5%;
 	padding-right: 5%;
 }
-@media only screen and (max-width: 40.063em) {
-	.mep-sidebar:after {
-		background: #fff;
-		border-right: none;
-		border-left: none;
-	}
-}
+
 /* Footer
 */
 div.mep-footer {
 	border-top: 1px solid #e2e3dd;
 	background: #ededed;
-	height: 120px;
+	height: 50px;
 	z-index: 999;
 	position: absolute;
 	width: 100%;
 	bottom: 0;
 	margin-bottom: 0px;
-}
-.footer-headline {
-	margin-top: 10px;
-	font-weight: bold;
-	margin-bottom: 0px;
+	padding-top: 10px;
 }
 .mep-footer ul {
 	margin-bottom: 0px;
 	line-height: 1.3;
 	font-size: 0.9em;
+	display: inline-block;
 }
+.mep-footer p {font-size: 0.9em;display: inline-block; color: #BBBCB8;}
+.mep-footer svg, .mep-footer img {margin-top: -10px;}
+.mep-footer li {display: inline-block;}
+.mep-footer li:after {content: " |"}
+.mep-footer li:last-child:after {content: ""}
 .mep-footer li a {
 	color: #5C6D7A;
 	text-decoration: underline;
-}
-.mep-branding {
-	height: 100%;
-}
-.mep-branding p {
-	color: #bbbcb8;
-	position: relative;
-	text-align: right;
-	margin-top:70px;
-	right: 0px;
-	bottom: 0px;
-	margin-bottom: 10px;
 }
 /* Experimenty výpis v kategorii
 */
@@ -795,4 +791,13 @@ div.mep-footer {
 	background: url(../img/kolaz1.png) #f6f4e8 no-repeat;
 	background-size: 100% 100%;
 	background-position: center center;
+}
+
+@media only screen and (max-width: 40.063em) {
+	.mep-sidebar:after {
+		background: #fff;
+		border-right: none;
+		border-left: none;
+	}
+	div.mep-footer {height: auto;}
 }
