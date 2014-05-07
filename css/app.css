@@ -155,7 +155,7 @@ transform: translate3d(0px, 0, 0);
 	/*Can help to prevent from blur*/
 	backface-visibility: hidden;
 	/*transform: translateZ(0);*/
-/*	-webkit-font-smoothing: subpixel-antialiased;*/
+	/*	-webkit-font-smoothing: subpixel-antialiased;*/
 }
 .highlight,
 .off-canvas.menu ul#list:hover > li:focus,
@@ -176,9 +176,9 @@ transform: translate3d(0px, 0, 0);
 .off-canvas.menu ul#list:hover > li:hover {
 /*	box-shadow: 0 .5rem .25rem -.25rem rgba(0,0,0,.2);
 */	opacity: 1;
-	-webkit-transition: -webkit-transform .088s,box-shadow .088s,background-color .088s;
-	transition: transform .088s,box-shadow .088s,background-color .088s;
-	z-index: 99999;
+-webkit-transition: -webkit-transform .088s,box-shadow .088s,background-color .088s;
+transition: transform .088s,box-shadow .088s,background-color .088s;
+z-index: 99999;
 }
 .highlight__auto {
 	background-color: auto;
@@ -238,7 +238,7 @@ transform: translate3d(0px, 0, 0);
 	/*	overflow: hidden;*/
 }
 .cesta .wrap {
-	padding: 5rem 0;
+	padding: 6.5rem 0;
 	background-color: whitesmoke;
 }
 .cesta header,
@@ -301,7 +301,13 @@ transform: translate3d(0px, 0, 0);
 	margin: auto;
 	overflow: auto;	*/
 
-	padding: 5rem 0;
+}
+.cesta header h2 {
+	line-height: 1.1;
+}
+.cesta header h2 small {
+	color: #999999;
+	font-weight: 100;
 }
 .cesta .obsah p,
 .cesta .obsah h6 {
