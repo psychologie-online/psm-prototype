@@ -149,8 +149,8 @@ transform: translate3d(0px, 0, 0);
 }
 .off-canvas.menu ul#list:hover > li {
 	opacity: .5;
-	-webkit-transform: scale(0.96);
-	transform: scale(0.96);
+	-webkit-transform: scale(0.98);
+	transform: scale(0.98);
 	background-color: transparent;
 	/*Can help to prevent from blur*/
 	backface-visibility: hidden;
@@ -165,11 +165,17 @@ transform: translate3d(0px, 0, 0);
 	-webkit-transform: scale(1);
 	transform:scale(1);
 }
+.off-canvas.menu ul#list:hover > li:first-child.highlight,
+.off-canvas.menu ul#list:hover > li:first-child:focus,
+.off-canvas.menu ul#list:hover > li:first-child:hover,
+.off-canvas.menu ul#list:hover > li:first-child.sortable-ghost {
+	border-top-right-radius: 0rem;
+}
 .highlight,
 .off-canvas.menu ul#list:hover > li:focus,
 .off-canvas.menu ul#list:hover > li:hover {
-	box-shadow: 0 .5rem .25rem -.25rem rgba(0,0,0,.2);
-	opacity: 1;
+/*	box-shadow: 0 .5rem .25rem -.25rem rgba(0,0,0,.2);
+*/	opacity: 1;
 	-webkit-transition: -webkit-transform .088s,box-shadow .088s,background-color .088s;
 	transition: transform .088s,box-shadow .088s,background-color .088s;
 	z-index: 99999;
