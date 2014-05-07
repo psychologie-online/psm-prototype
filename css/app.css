@@ -785,7 +785,6 @@ div.mep-footer {
 	}
 }
 .claimbox {
-
 	background-size: 100%;
 	height:278px;
 }
@@ -812,6 +811,10 @@ div.mep-footer {
 	background: url(../img/kolaz1.png) #f6f4e8 no-repeat;
 	background-size: 100% 100%;
 	background-position: center center;
+}
+.cestawrap {
+	width: 100%;
+	background-color: #f6f4e8;
 }
 
 @media only screen and (max-width: 40.063em) {
