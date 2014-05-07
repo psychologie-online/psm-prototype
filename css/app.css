@@ -304,6 +304,9 @@ z-index: 99999;
 	overflow: auto;	*/
 
 }
+.cesta header img {
+	margin-top: -4px;
+}
 .cesta header h2 {
 	line-height: 1;
 	margin: 0;
