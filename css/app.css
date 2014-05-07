@@ -144,21 +144,26 @@ transform: translate3d(0px, 0, 0);
 	-webkit-transition: -webkit-transform .22s,box-shadow .22s;
 	transition: transform .22s,box-shadow .22s;
 	box-shadow: 0 0 0 -.25rem rgba(0,0,0,.1);
-	border-radius: .25rem;
+	border-top-right-radius: .25rem;
+	border-bottom-right-radius: .25rem;
 }
 .off-canvas.menu ul#list:hover > li {
 	opacity: .5;
-	-webkit-transform: scale(0.97);
-	transform: scale(0.97);
+	-webkit-transform: scale(0.96);
+	transform: scale(0.96);
 	background-color: transparent;
+	/*Can help to prevent from blur*/
+	backface-visibility: hidden;
+	/*transform: translateZ(0);*/
+/*	-webkit-font-smoothing: subpixel-antialiased;*/
 }
 .highlight,
 .off-canvas.menu ul#list:hover > li:focus,
 .off-canvas.menu ul#list:hover > li:hover,
 .off-canvas.menu ul#list:hover > li.sortable-ghost {
 	background-color: #F6F4E8;
-	-webkit-transform: scale(1.03);
-	transform:scale(1.03);
+	-webkit-transform: scale(1);
+	transform:scale(1);
 }
 .highlight,
 .off-canvas.menu ul#list:hover > li:focus,
@@ -178,11 +183,13 @@ transform: translate3d(0px, 0, 0);
 .off-canvas.menu ul#list:hover > li:focus p,
 .off-canvas.menu ul#list:hover > li:hover p {
 	color: #2A8B6D;
+	backface-visibility: hidden;
 }
 .highlight h4 a,
 .off-canvas.menu ul#list:hover > li:focus h4 a,
 .off-canvas.menu ul#list:hover > li:hover h4 a {
 	color: #212121;
+	backface-visibility: hidden;
 }
 .off-canvas.menu ul#list:hover > li.sortable-ghost {
 	opacity: 0.4;
@@ -197,6 +204,7 @@ transform: translate3d(0px, 0, 0);
 }
 .off-canvas.menu ul#list > li p {
 	margin-bottom: 0;
+	backface-visibility: hidden;
 }
 
 .off-canvas.menu a.button {
