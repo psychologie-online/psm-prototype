@@ -32,7 +32,8 @@ div.wrap {
 
 .cesty-quantity { /*počítadlo*/
 	background-color: #c0392b;
-	border-radius: 10px;
+	border-radius: 1000px;
+	border: 1px solid #fff;
 	color: white;
 	font-size: 11px;
 	font-weight: 500;
@@ -402,8 +403,8 @@ li.name {padding-top: 2px;}
 	float: right;
 	margin-right:2px;
 	margin-top:-5px;
-    padding: 0.45em;
-    padding-bottom: 0.50em;
+	padding: 0.45em;
+	padding-bottom: 0.50em;
 	box-shadow: none;
 }
 .searchbox:hover .button {
@@ -411,7 +412,7 @@ li.name {padding-top: 2px;}
 	-webkit-transform: translate(0, 0px);
 	transform: translate(0, 0px);
 	transform: none;
-    box-shadow:none;
+	box-shadow:none;
 }
 /* Placeholder Color
 	- http://css-tricks.com/snippets/css/style-placeholder-text/
