@@ -114,12 +114,14 @@ transform: translate3d(0px, 0, 0);
 	padding: 1.5rem 0.75rem;
 }
 .off-canvas.menu > .row:first-child {
-	border-bottom: 1px solid #3DC89C;
+	border-bottom: 2px solid #3DC89C;
 }
 .off-canvas.menu h3 {
-	color: white;
+	color: #3dc89c;
 	margin-bottom: 0;
-	line-height: 47px;
+	margin: 0;
+	line-height: 48px;
+	font-weight: 100;
 }
 .off-canvas.menu p,
 .off-canvas.menu h4,
