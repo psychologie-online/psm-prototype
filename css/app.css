@@ -32,15 +32,17 @@ div.wrap {
 
 .cesty-quantity { /*počítadlo*/
 	background-color: #c0392b;
-	border-radius: 10px;
+	border-radius: 1000px;
+	border: 1px solid #fff;
 	color: white;
 	font-size: 11px;
 	font-weight: 500;
-	padding: 1px 6px;
+	padding: 2px 7px;
 	position: relative;
 	text-align: center;
 	text-shadow: none;
 	top: -7px;
+	left: -11px;
 	z-index: 10;
 }
 
@@ -112,12 +114,14 @@ transform: translate3d(0px, 0, 0);
 	padding: 1.5rem 0.75rem;
 }
 .off-canvas.menu > .row:first-child {
-	border-bottom: 1px solid #3DC89C;
+	border-bottom: 2px solid #3DC89C;
 }
 .off-canvas.menu h3 {
-	color: white;
+	color: #3dc89c;
 	margin-bottom: 0;
-	line-height: 57px;
+	margin: 0;
+	line-height: 48px;
+	font-weight: 100;
 }
 .off-canvas.menu p,
 .off-canvas.menu h4,
@@ -155,7 +159,7 @@ transform: translate3d(0px, 0, 0);
 	/*Can help to prevent from blur*/
 	backface-visibility: hidden;
 	/*transform: translateZ(0);*/
-/*	-webkit-font-smoothing: subpixel-antialiased;*/
+	/*	-webkit-font-smoothing: subpixel-antialiased;*/
 }
 .highlight,
 .off-canvas.menu ul#list:hover > li:focus,
@@ -176,9 +180,9 @@ transform: translate3d(0px, 0, 0);
 .off-canvas.menu ul#list:hover > li:hover {
 /*	box-shadow: 0 .5rem .25rem -.25rem rgba(0,0,0,.2);
 */	opacity: 1;
-	-webkit-transition: -webkit-transform .088s,box-shadow .088s,background-color .088s;
-	transition: transform .088s,box-shadow .088s,background-color .088s;
-	z-index: 99999;
+-webkit-transition: -webkit-transform .088s,box-shadow .088s,background-color .088s;
+transition: transform .088s,box-shadow .088s,background-color .088s;
+z-index: 99999;
 }
 .highlight__auto {
 	background-color: auto;
@@ -238,7 +242,7 @@ transform: translate3d(0px, 0, 0);
 	/*	overflow: hidden;*/
 }
 .cesta .wrap {
-	padding: 5rem 0;
+	padding: 6.5rem 0;
 	background-color: whitesmoke;
 }
 .cesta header,
@@ -247,8 +251,8 @@ transform: translate3d(0px, 0, 0);
 	left:0px;right:0px;
 	z-index: 100;
 	background-color: #fff;
-	height: 60px;
-	line-height: 60px;
+	height: 50px;
+	line-height: 50px;
 }
 .cesta header {
 	top:0px;
@@ -301,7 +305,17 @@ transform: translate3d(0px, 0, 0);
 	margin: auto;
 	overflow: auto;	*/
 
-	padding: 5rem 0;
+}
+.cesta header img {
+	margin-top: -4px;
+}
+.cesta header h2 {
+	line-height: 1;
+	margin: 0;
+}
+.cesta header h2 small {
+	color: #999999;
+	font-weight: 100;
 }
 .cesta .obsah p,
 .cesta .obsah h6 {
@@ -317,7 +331,7 @@ transform: translate3d(0px, 0, 0);
 .cesta .progress {
 	border: 1px solid #FFF;
 	height: 12px;
-	margin-top: 24px;
+	margin-top: 19px;
 	background-color: whitesmoke;
 }
 .cesta .progress .meter {
@@ -395,8 +409,8 @@ li.name {padding-top: 2px;}
 	float: right;
 	margin-right:2px;
 	margin-top:-5px;
-    padding: 0.45em;
-    padding-bottom: 0.50em;
+	padding: 0.45em;
+	padding-bottom: 0.50em;
 	box-shadow: none;
 }
 .searchbox:hover .button {
@@ -404,7 +418,7 @@ li.name {padding-top: 2px;}
 	-webkit-transform: translate(0, 0px);
 	transform: translate(0, 0px);
 	transform: none;
-    box-shadow:none;
+	box-shadow:none;
 }
 /* Placeholder Color
 	- http://css-tricks.com/snippets/css/style-placeholder-text/
