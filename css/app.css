@@ -236,7 +236,7 @@ transform: translate3d(0px, 0, 0);
 	/*	overflow: hidden;*/
 }
 .cesta .wrap {
-	padding: 45px 0;
+	padding: 5rem 0;
 	background-color: whitesmoke;
 }
 .cesta header,
@@ -245,8 +245,8 @@ transform: translate3d(0px, 0, 0);
 	left:0px;right:0px;
 	z-index: 100;
 	background-color: #fff;
-	height: 45px;
-	line-height: 45px;
+	height: 60px;
+	line-height: 60px;
 }
 .cesta header {
 	top:0px;
@@ -314,12 +314,12 @@ transform: translate3d(0px, 0, 0);
 }
 .cesta .progress {
 	border: 1px solid #FFF;
-	height: 46px;
+	height: 12px;
+	margin-top: 24px;
 	background-color: whitesmoke;
 }
 .cesta .progress .meter {
-	border: 1px solid #3DC89C;
-	background-color: white;
+	background-color: #3DC89C;
 }
 
 
