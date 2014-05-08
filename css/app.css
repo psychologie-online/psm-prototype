@@ -154,8 +154,8 @@ transform: translate3d(0px, 0, 0);
 }
 .off-canvas.menu ul#list:hover > li {
 	opacity: .5;
-	-webkit-transform: scale(0.98);
-	transform: scale(0.98);
+	-webkit-transform: scale(0.97);
+	transform: scale(0.97);
 	background-color: transparent;
 	/*Can help to prevent from blur*/
 	backface-visibility: hidden;
@@ -163,7 +163,7 @@ transform: translate3d(0px, 0, 0);
 	/*	-webkit-font-smoothing: subpixel-antialiased;*/
 }
 .highlight,
-.off-canvas.menu ul#list:hover > li:focus,
+/*.off-canvas.menu ul#list:hover > li:focus,*/
 .off-canvas.menu ul#list:hover > li:hover,
 .off-canvas.menu ul#list:hover > li.sortable-ghost {
 	background-color: #F6F4E8;
@@ -171,7 +171,7 @@ transform: translate3d(0px, 0, 0);
 	transform:scale(1);
 }
 .off-canvas.menu ul#list:hover > li:first-child.highlight,
-.off-canvas.menu ul#list:hover > li:first-child:focus,
+/*.off-canvas.menu ul#list:hover > li:first-child:focus,*/
 .off-canvas.menu ul#list:hover > li:first-child:hover,
 .off-canvas.menu ul#list:hover > li:first-child.sortable-ghost {
 	border-top-right-radius: 0rem;
