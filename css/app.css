@@ -121,7 +121,8 @@ transform: translate3d(0px, 0, 0);
 	margin-bottom: 0;
 	margin: 0;
 	line-height: 48px;
-	font-weight: 100;
+	/*font-weight: 100;*/
+	font-size: 1.5rem;
 }
 .off-canvas.menu p,
 .off-canvas.menu h4,
@@ -137,7 +138,7 @@ transform: translate3d(0px, 0, 0);
 .off-canvas.menu p,
 .off-canvas.menu h4,
 .navod li {
-	font-size: 75%;
+	font-size: .75rem;
 }
 .off-canvas.menu ul#list {
 	text-align: left;
@@ -215,6 +216,7 @@ z-index: 99999;
 .off-canvas.menu ul#list > li p {
 	margin-bottom: 0;
 	backface-visibility: hidden;
+	opacity: .75;
 }
 
 .off-canvas.menu a.button {
@@ -337,8 +339,8 @@ z-index: 99999;
 .cesta .progress .meter {
 	background-color: #3DC89C;
 }
-/* Buttons animations
-*/
+/* Buttons animations */
+
 /*	Header Customization  */
 .top-bar,
 .contain-to-grid,
@@ -421,26 +423,24 @@ li.name {padding-top: 2px;}
 	box-shadow:none;
 }
 /* Placeholder Color
-	- http://css-tricks.com/snippets/css/style-placeholder-text/
-	*/
-	::-webkit-input-placeholder {
-		color: rgba(255,255,255,0.5);
-		opacity: 1;
-	}
-	:-moz-placeholder { /* Firefox 18- */
-		color: rgba(255,255,255,0.5);
-		opacity: 1;
-	}
-	::-moz-placeholder {  /* Firefox 19+ */
-		color: rgba(255,255,255,0.5);
-		opacity: 1;
-	}
-	:-ms-input-placeholder {
-		color: rgba(255,255,255,0.5);
-		opacity: 1;
-	}
-/* Responsive menu fix
-*/
+- http://css-tricks.com/snippets/css/style-placeholder-text/ */
+::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.5);
+	opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: rgba(255,255,255,0.5);
+	opacity: 1;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+	color: rgba(255,255,255,0.5);
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	color: rgba(255,255,255,0.5);
+	opacity: 1;
+}
+/* Responsive menu fix */
 nav.top-bar,
 .top-bar .title-area {
 	height: 48px;
@@ -485,7 +485,7 @@ nav.top-bar,
 .wrap > .row:first-child {
 	border-left: 1px solid #f6f4e8;
 }
-@media only screen and (min-width: 95.063em) {
+@media only screen and (min-width: 90.063em) {
 	.wrap > .row:first-child {
 		border-left: 1px solid #e2e3dd;
 	}
@@ -496,8 +496,13 @@ nav.top-bar,
 	background: #f6f4e8;
 	/*border-left: 1px solid #e2e3dd;*/
 	border-right: 1px solid #e2e3dd;
-	padding-left: 2.5%;
-	padding-right: 2.5%;
+	padding: 0 1.5rem;
+}
+@media only screen and (max-width: 40.063em) {
+	.mep-sidebar {
+		border-bottom: 1px solid #e2e3dd;
+		border-right: 0;
+	}
 }
 .mep-sidebar:before {
 	position:absolute;
@@ -515,7 +520,7 @@ nav.top-bar,
 	left: -1px;
 	width:100%;
 	height:10000%;
-	/*border-left: 1px solid #e2e3dd;*/
+	border-left: 1px solid #e2e3dd;
 	border-right: 1px solid #e2e3dd;
 	box-sizing:content-box;
 	-moz-box-sizing:content-box;
@@ -546,9 +551,22 @@ nav.top-bar,
 	margin-bottom:0px;
 	font-weight:bold;
 }
-.mep-sidebar p {
-	font-size: 0.9rem;
-	line-height: 130%;
+.mep-sidebar p,
+.mep-sidebar dl {
+	font-size: .75rem;
+	line-height: 1.6;
+}
+.mep-sidebar dl {
+	opacity: .5;
+	padding-left: .9rem;
+}
+.mep-sidebar dl:before {
+	content: "\25B6";
+	position: absolute;
+	margin-top: 2px;
+	margin-left: -0.9rem;
+	font-size: .75em;
+	opacity: .5;
 }
 a.button {
 	background: #ec6744;
@@ -585,13 +603,8 @@ image.mep-demo {
 	padding-left: 5%;
 	padding-right: 5%;
 }
-.katalog-1,
-.katalog-2,
-.katalog-3 {
-	margin-bottom: 150px;
-}
-/* Footer
-*/
+
+/* Footer */
 div.mep-footer {
 	border-top: 1px solid #e2e3dd;
 	background: #ededed;
@@ -628,15 +641,24 @@ div.mep-footer {
 	float: left;
 }
 .experiment {
-	border-bottom: 1px solid #e2e3dd;
 	padding-bottom: 3rem;
 	-webkit-transition: 500ms;
 	transition: 500ms;
 }
-.experiment:hover {
-	background:rgba(0,0,0,0.05);
+.experiment,
+.katalog .klasifikace li {
+	border-bottom: 1px solid rgba(226,227,221,.5); /* #e2e3dd */
+}
+.experiment:last-child,
+.katalog .klasifikace li:last-child {
+	border-bottom: 0;
+}
+.experiment:hover,
+.katalog .klasifikace li:hover {
+	background: rgba(0,0,0,0.05);
 	-webkit-transition: 500ms;
 	transition: 500ms;
+	border-bottom-right-radius: .25rem;
 }
 .experiment p {
 	font-size: 0.8em;
@@ -645,12 +667,14 @@ div.mep-footer {
 	margin-top: 3rem;
 	font-size: 1.5em;
 }
-.experiment a {
-	color: #5C6D7A;
-	text-decoration: underline;
+.experiment a,
+.katalog .klasifikace a:not(.button) {
+	color: /*#5C6D7A*/ #222;
+	font-weight: bold;
 }
-.experiment a:hover {
-	text-decoration: none;
+.experiment a:hover,
+.katalog .klasifikace a:hover:not(.button) {
+	text-decoration: underline;
 }
 .experiment .add {
 	margin-top: 3em;
@@ -667,57 +691,63 @@ div.mep-footer {
 @media only screen and (max-width: 40.063em) {
 	.experiment img {display: none;}
 }
-/* Katalog
-*/
-.katalog-2 {
-	margin-bottom: 0px;
-}
-.katalog-1 h1,
-.katalog-2 h2,
-.katalog-3 h2 {
-	text-transform: uppercase;
-	font-size: 1.1em;
-	font-weight: normal;
-	text-decoration: none;
-	color: #222;
-	line-height: 120%;
-	margin-top: 3rem;
-	border:none;
-	margin-bottom: 10px;
-	padding-bottom: inherit;
-}
-.katalog-1 h1 {padding-left:50px;}
-.katalog-1 a:not(.button),
-.katalog-2 a:not(.button),
-.katalog-3 a:not(.button){
-	color: #5C6D7A;
-	text-decoration: underline;
-}
-.katalog-1 a:hover:not(.button),
-.katalog-2 a:hover:not(.button),
-.katalog-3 a:hover:not(.button){
-	text-decoration: none;
-}
-.katalog-1 {padding:0px;}
-.katalog-1 ul {
-	list-style: none;
-	font-size: 32px;
-	margin-left:0px;
-	width:100%;
-}
-.katalog-1 li {
-	text-shadow: 1px 1px 0px #fff;
-	padding: 20px 70px;
-	border-top: 1px solid #e2e3dd;
 
+/* Katalog */
+.katalog .mep-content {
+	padding: 0;
 }
-.katalog-2 ul,
-.katalog-3 ul{
+.katalog .row .row {
+	margin: 0;
+}
+.katalog .row .row .columns {
+	padding: 0;
+}
+.katalog .klasifikace .small-6.columns:first-child {
+	border-right: .5rem solid /*#e2e3dd*/ white;
+}
+.katalog .klasifikace h2 small {
+	text-transform: uppercase;
+	font-weight: 100;
+	color: #e2e3dd;
+	font-size: 1rem;
+	line-height: 1.4;
+	margin-left: 1.5rem;
+}
+.katalog .klasifikace ul {
 	list-style: none;
-	font-size: 1.4rem;
+	width: 100%;
+	margin: 0;
+	margin-bottom: 1rem;
 }
-/* Homepage
-*/
+.katalog .klasifikace li {
+	text-shadow: 1px 1px 0px #fff;
+	padding: 1rem 1.5rem;
+}
+.katalog .klasifikace li span {
+	opacity: .25;
+	float: right;
+	font-size: .75rem;
+}
+.katalog .klasifikace li div {
+	font-size: .75rem;
+	color: rgba(34,34,34,.5);
+}
+/*.katalog-1 {
+	background-color: rgba(0,0,0,0.05);
+}
+.katalog .klasifikace .katalog-1 h2 small {
+	color: white;
+}
+.katalog .katalog-1 li {
+	border-color: white;
+}
+.katalog .katalog-1 li:hover {
+	background-color: white;
+	-webkit-transition: 500ms;
+	transition: 500ms;
+}*/
+
+/* Homepage */
 .e-intro
 {
 	width:100px;
