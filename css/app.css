@@ -111,7 +111,7 @@ transform: translate3d(0px, 0, 0);
 .cesta .off-canvas.menu {
 	width: 15rem;
 	left: 0px;
-	padding: 1.5rem 0.75rem;
+	padding: 1.5rem 0.4rem;
 }
 .off-canvas.menu > .row:first-child {
 	border-bottom: 2px solid #3DC89C;
@@ -138,7 +138,7 @@ transform: translate3d(0px, 0, 0);
 .off-canvas.menu p,
 .off-canvas.menu h4,
 .navod li {
-	font-size: .75rem;
+	font-size: .8rem;
 }
 .off-canvas.menu ul#list {
 	text-align: left;
@@ -553,7 +553,7 @@ nav.top-bar,
 }
 .mep-sidebar p,
 .mep-sidebar dl {
-	font-size: .75rem;
+	font-size: .8rem;
 	line-height: 1.6;
 }
 .mep-sidebar dl {
@@ -661,7 +661,7 @@ div.mep-footer {
 	border-bottom-right-radius: .25rem;
 }
 .experiment p {
-	font-size: .75rem;
+	font-size: .8rem;
 }
 .experiment h3 {
 	margin-top: 3rem;
@@ -710,7 +710,7 @@ div.mep-footer {
 	text-transform: uppercase;
 	font-weight: 100;
 	color: #222;
-	font-size: .75rem;
+	font-size: .8rem;
 	line-height: 1.4;
 	margin-left: 1.5rem;
 	opacity: .5;
@@ -728,10 +728,10 @@ div.mep-footer {
 .katalog .klasifikace li span {
 	opacity: .25;
 	float: right;
-	font-size: .75rem;
+	font-size: .8rem;
 }
 .katalog .klasifikace li div {
-	font-size: .75rem;
+	font-size: .8rem;
 	color: rgba(34,34,34,.5);
 }
 /*.katalog-1 {
