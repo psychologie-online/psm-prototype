@@ -220,9 +220,10 @@ z-index: 99999;
 }
 
 .off-canvas.menu a.button {
-	background-color: rgba(0, 0, 0, .3);
+	background-color: rgba(34,34,34,.5);
 	box-shadow: 0px 3px 0px rgba(0, 0, 0, .6);
 	border-radius: 5px;
+	/*display: none;*/
 }
 .off-canvas.menu a.button:hover {
 	box-shadow: none;
@@ -231,7 +232,7 @@ z-index: 99999;
 .off-canvas.menu .navod li,
 .off-canvas.menu .navod h4,
 .navod [class^="icon-"], .navod [class*=" icon-"] {
-	color: #373737;
+	color: rgba(34,34,34,.5);
 }
 .icon-close {
 	font-size: 75%;
