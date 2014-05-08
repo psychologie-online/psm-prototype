@@ -557,7 +557,7 @@ nav.top-bar,
 	line-height: 1.6;
 }
 .mep-sidebar dl {
-	opacity: .5;
+	opacity: 1;
 	padding-left: .9rem;
 }
 .mep-sidebar dl:before {
@@ -566,7 +566,7 @@ nav.top-bar,
 	margin-top: 2px;
 	margin-left: -0.9rem;
 	font-size: .75em;
-	opacity: .5;
+	opacity: .25;
 }
 a.button {
 	background: #ec6744;
