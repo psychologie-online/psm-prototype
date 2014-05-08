@@ -3,9 +3,11 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="43.397px" height="48.415px" viewBox="0 0 43.397 48.415" enable-background="new 0 0 43.397 48.415" xml:space="preserve">
-<path fill="#222222" d="M40.447,32.538h2.952V0.36H0v32.178h1.16 M41.112,2.647V30.25h-0.665h-2.286H37.7h-2.287H4.4H3.448H2.288
-	V12.762V6.935V2.647H41.112z"/>
-<line fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="21.699" y1="31.52" x2="21.699" y2="39.004"/>
-<line fill="none" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="21.7" y1="39.208" x2="28.358" y2="41.625"/>
-<line fill="none" stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="21.7" y1="39.208" x2="15.042" y2="41.625"/>
+<g>
+	<path fill="#5C6D7A" d="M9.54,14.275v9.526c0,3.009,5.443,5.452,12.16,5.452c6.718,0,12.161-2.442,12.161-5.452v-9.526L21.7,18.019
+		L9.54,14.275z"/>
+	<path fill="#5C6D7A" d="M40.172,14.099c-0.051-0.199-0.186-0.355-0.359-0.447v-3.118l2.039-0.635L21.7,3.645L1.549,9.899
+		L21.7,16.156l17.435-5.413v2.909c-0.17,0.095-0.309,0.249-0.358,0.447l-0.887,3.56c-0.055,0.216-0.004,0.441,0.13,0.618
+		c0.137,0.173,0.346,0.276,0.567,0.276h1.774c0.225,0,0.43-0.103,0.568-0.276c0.135-0.177,0.186-0.402,0.13-0.618L40.172,14.099z"/>
+</g>
 </svg>
