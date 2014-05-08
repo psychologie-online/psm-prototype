@@ -412,8 +412,8 @@ li.name {padding-top: 2px;}
 	float: right;
 	margin-right:2px;
 	margin-top:-5px;
-	padding: 0.45em;
-	padding-bottom: 0.50em;
+	padding: .4em .55em;
+	/*padding-bottom: 0.50em;*/
 	box-shadow: none;
 }
 .searchbox:hover .button {
