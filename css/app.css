@@ -841,7 +841,6 @@ div.mep-footer {
 		margin-top: 45px;
 		text-align: center;
 	}
-<<<<<<< HEAD
 }
 .claimbox {
 	background-size: 100%;
@@ -870,30 +869,30 @@ div.mep-footer {
 	background: url(../img/kolaz1.png) #f6f4e8 no-repeat;
 	background-size: 100% 100%;
 	background-position: center center;
-    margin-bottom: 5rem;
+	margin-bottom: 5rem;
 }
 .cestawrap {
 	width: 100%;
 	background-color: #f6f4e8;
-    padding-top: 5rem;
-    padding-bottom: 140px;
+	padding-top: 5rem;
+	padding-bottom: 140px;
 }
 .hpbox-1,
 .hpbox-2 {
-    padding: 0 70px;
-    margin-bottom: 5rem;
+	padding: 0 70px;
+	margin-bottom: 5rem;
 }
 p.hp-icon  {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin: auto;
-    transition: 500ms;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	margin: auto;
+	transition: 500ms;
 }
 .hpbox-1:hover p.hp-icon,
 .hpbox-2:hover p.hp-icon{
-    background:#f6f4e8;
-    transition: 1s;
+	background:#f6f4e8;
+	transition: 1s;
 }
 
 .hpbox-1 h2 a,
@@ -902,11 +901,11 @@ p.hp-icon  {
 .hpbox-2 p.hp-icon img {margin-top: 50px;}
 
 @media only screen and (max-width: 54.063em) {
-    .intro-wrap h2 {font-size:2em;}
+	.intro-wrap h2 {font-size:2em;}
 }
 @media only screen and (max-width: 47.063em) {
-    .e-intro {display:none;}
-    .intro-wrap {margin-top:0px;}
+	.e-intro {display:none;}
+	.intro-wrap {margin-top:0px;}
 }
 @media only screen and (max-width: 40.063em) {
 	.mep-sidebar:after {
@@ -916,42 +915,7 @@ p.hp-icon  {
 	}
 	div.mep-footer {height: auto;}
 	.katalog-1 {margin-bottom:inherit;}
-    .mep-intro {overflow: visible;font-size:.8em;}
-    .intro-wrap h2 {font-size:1.5em;}
-    .hpbox-1, .hpbox-2 {padding: 0;}
+	.mep-intro {overflow: visible;font-size:.8em;}
+	.intro-wrap h2 {font-size:1.5em;}
+	.hpbox-1, .hpbox-2 {padding: 0;}
 }
-=======
-	.mep-intro p {
-		margin-bottom: 0px;
-		line-height: 100%;
-		font-size: 2em;
-		font-weight: bold;
-		color: #222;
-	}
-	.intro-wrap h2 {
-		margin-top:40px;
-		text-shadow: 1px 1px 0px #fff;
-
-	}
-	.homepagewrap {
-		width: 100%;
-		background-color: #f6f4e8;
-		background: url(../img/kolaz1.png) #f6f4e8 no-repeat;
-		background-size: 100% 100%;
-		background-position: center center;
-	}
-	.cestawrap {
-		width: 100%;
-		background-color: #f6f4e8;
-	}
-
-	@media only screen and (max-width: 40.063em) {
-		.mep-sidebar:after {
-			background: #fff;
-			border-right: none;
-			border-left: none;
-		}
-		div.mep-footer {height: auto;}
-		.katalog-1 {margin-bottom:inherit;}
-	}
->>>>>>> Jiri-dev
