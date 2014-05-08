@@ -38,9 +38,11 @@ function getOrder() {
 
 		if( quantity < 1 ) {
 			$("#quantity").text(quantity);
+			$("#spustit-cestu").hide();
 		}
 		else {
 			$("#quantity").text(quantity);
+			$("#spustit-cestu").show();
 		}
 
 		console.log("Počet položek: " + quantity);
@@ -92,7 +94,6 @@ function removeItem() {
 	// });
 }
 
-
 // COOKIES
 //
 // ! Doesn't work in Chrome when testing local – use Firefox
@@ -135,6 +136,8 @@ $(document).ready(function() {
 
 // načte cookies jako první
 restoreCookie();
+
+$("#spustit-cestu").hide();
 
 // (OPEN & CLOSE) SIDEBAR
 	// Click anywhere to close sidebar
