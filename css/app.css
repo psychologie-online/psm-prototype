@@ -704,7 +704,7 @@ div.mep-footer {
 	padding: 0;
 }
 .katalog .klasifikace .small-6.columns:first-child {
-	border-right: .5rem solid /*#e2e3dd*/ white;
+	border-right: 1rem solid /*#e2e3dd*/ white;
 }
 .katalog .klasifikace h2 small {
 	text-transform: uppercase;
