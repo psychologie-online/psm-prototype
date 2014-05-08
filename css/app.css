@@ -527,15 +527,14 @@ nav.top-bar,
 	z-index:-999;
 }
 .mep-sidebar h1 {
-	font-weight: normal;
 	font-size: 2em;
 	text-transform: none;
 	color: #5C6D7A;
 	line-height: 120%;
-	margin-top:3rem;
+	margin-top: 2rem;
 	margin-bottom: 1.1rem;
 	padding-bottom: 2rem;
-	border-bottom: 2px solid #e2e3dd;
+	border-bottom: 2px solid #E2E3DD;
 }
 .add {
 	float:right;
