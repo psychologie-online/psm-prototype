@@ -708,10 +708,11 @@ div.mep-footer {
 .katalog .klasifikace h2 small {
 	text-transform: uppercase;
 	font-weight: 100;
-	color: #e2e3dd;
-	font-size: 1rem;
+	color: #222;
+	font-size: .75rem;
 	line-height: 1.4;
 	margin-left: 1.5rem;
+	opacity: .5;
 }
 .katalog .klasifikace ul {
 	list-style: none;
@@ -745,129 +746,129 @@ div.mep-footer {
 	background-color: white;
 	-webkit-transition: 500ms;
 	transition: 500ms;
-}*/
+	}*/
 
-/* Homepage */
-.e-intro
-{
-	width:100px;
-	height:100px;
-	background:url(../img/mep3.svg) no-repeat;
-	background-size: 100px 100px;
-	position:relative;
-	display: inline-block;
-	animation:rotation 0.7s 1 ease-in-out;
-	-webkit-animation:rotation 0.7s 1 ease-in-out; /*Safari and Chrome*/
-	-moz-animation:rotation 0.7s 1 ease-in-out; /*Firefox*/
-	-o-animation:rotation 0.7s 1 ease-in-out; /*Opera*/
-}
-@keyframes rotation
-{
-	from {
-		left:300px;
-		transform:rotate(360deg);
-		-ms-transform:rotate(360deg); /* IE 9 */
-		-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
-		-moz-transform:rotate(360deg); /* Firefox */
-		-o-transform:rotate(360deg); /* Opera*/
+	/* Homepage */
+	.e-intro
+	{
+		width:100px;
+		height:100px;
+		background:url(../img/mep3.svg) no-repeat;
+		background-size: 100px 100px;
+		position:relative;
+		display: inline-block;
+		animation:rotation 0.7s 1 ease-in-out;
+		-webkit-animation:rotation 0.7s 1 ease-in-out; /*Safari and Chrome*/
+		-moz-animation:rotation 0.7s 1 ease-in-out; /*Firefox*/
+		-o-animation:rotation 0.7s 1 ease-in-out; /*Opera*/
 	}
-	to {
-		left:0px;
-		transform:rotate(0deg);
-		-ms-transform:rotate(0deg); /* IE 9 */
-		-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
-		-moz-transform:rotate(0deg); /* Firefox */
-		-o-transform:rotate(0deg); /* Opera*/
+	@keyframes rotation
+	{
+		from {
+			left:300px;
+			transform:rotate(360deg);
+			-ms-transform:rotate(360deg); /* IE 9 */
+			-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
+			-moz-transform:rotate(360deg); /* Firefox */
+			-o-transform:rotate(360deg); /* Opera*/
+		}
+		to {
+			left:0px;
+			transform:rotate(0deg);
+			-ms-transform:rotate(0deg); /* IE 9 */
+			-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
+			-moz-transform:rotate(0deg); /* Firefox */
+			-o-transform:rotate(0deg); /* Opera*/
+		}
 	}
-}
-@-webkit-keyframes rotation /*Safari and Chrome*/
-{
-	from {
-		left:300px;
-		transform:rotate(360deg);
-		-ms-transform:rotate(360deg); /* IE 9 */
-		-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
-		-moz-transform:rotate(360deg); /* Firefox */
-		-o-transform:rotate(360deg); /* Opera*/
+	@-webkit-keyframes rotation /*Safari and Chrome*/
+	{
+		from {
+			left:300px;
+			transform:rotate(360deg);
+			-ms-transform:rotate(360deg); /* IE 9 */
+			-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
+			-moz-transform:rotate(360deg); /* Firefox */
+			-o-transform:rotate(360deg); /* Opera*/
+		}
+		to {
+			left:0px;
+			transform:rotate(0deg);
+			-ms-transform:rotate(0deg); /* IE 9 */
+			-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
+			-moz-transform:rotate(0deg); /* Firefox */
+			-o-transform:rotate(0deg); /* Opera*/
+		}
 	}
-	to {
-		left:0px;
-		transform:rotate(0deg);
-		-ms-transform:rotate(0deg); /* IE 9 */
-		-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
-		-moz-transform:rotate(0deg); /* Firefox */
-		-o-transform:rotate(0deg); /* Opera*/
+	.mep-intro
+	{
+		position:relative;
+		display: inline-block;
+		overflow: hidden;
+		height: 100px;
+		padding-top: 25px;
+		animation:mepintro 1.5s 1 ease-in-out;
+		-webkit-animation:mepintro 1.5s 1 ease-in-out; /*Safari and Chrome*/
+		-moz-animation:mepintro 1.5s 1 ease-in-out; /*Firefox*/
+		-o-animation:mepintro 1.5s 1 ease-in-out; /*Opera*/
 	}
-}
-.mep-intro
-{
-	position:relative;
-	display: inline-block;
-	overflow: hidden;
-	height: 100px;
-	padding-top: 25px;
-	animation:mepintro 1.5s 1 ease-in-out;
-	-webkit-animation:mepintro 1.5s 1 ease-in-out; /*Safari and Chrome*/
-	-moz-animation:mepintro 1.5s 1 ease-in-out; /*Firefox*/
-	-o-animation:mepintro 1.5s 1 ease-in-out; /*Opera*/
-}
-@keyframes mepintro
-{
-	from {
-		text-indent: -9999px;
+	@keyframes mepintro
+	{
+		from {
+			text-indent: -9999px;
+		}
+		to {
+			text-indent: 0px;
+		}
 	}
-	to {
-		text-indent: 0px;
+	@-webkit-keyframes mepintro /*Safari and Chrome*/
+	{
+		from {
+			text-indent: -9999px;
+		}
+		to {
+			text-indent: 0px;
+		}
 	}
-}
-@-webkit-keyframes mepintro /*Safari and Chrome*/
-{
-	from {
-		text-indent: -9999px;
+	.claimbox {
+		background-size: 100%;
+		height:278px;
 	}
-	to {
-		text-indent: 0px;
+	.intro-wrap {
+		margin: auto;
+		margin-top: 45px;
+		text-align: center;
 	}
-}
-.claimbox {
-	background-size: 100%;
-	height:278px;
-}
-.intro-wrap {
-	margin: auto;
-	margin-top: 45px;
-	text-align: center;
-}
-.mep-intro p {
-	margin-bottom: 0px;
-	line-height: 100%;
-	font-size: 2em;
-	font-weight: bold;
-	color: #222;
-}
-.intro-wrap h2 {
-	margin-top:40px;
-	text-shadow: 1px 1px 0px #fff;
+	.mep-intro p {
+		margin-bottom: 0px;
+		line-height: 100%;
+		font-size: 2em;
+		font-weight: bold;
+		color: #222;
+	}
+	.intro-wrap h2 {
+		margin-top:40px;
+		text-shadow: 1px 1px 0px #fff;
 
-}
-.homepagewrap {
-	width: 100%;
-	background-color: #f6f4e8;
-	background: url(../img/kolaz1.png) #f6f4e8 no-repeat;
-	background-size: 100% 100%;
-	background-position: center center;
-}
-.cestawrap {
-	width: 100%;
-	background-color: #f6f4e8;
-}
-
-@media only screen and (max-width: 40.063em) {
-	.mep-sidebar:after {
-		background: #fff;
-		border-right: none;
-		border-left: none;
 	}
-	div.mep-footer {height: auto;}
-	.katalog-1 {margin-bottom:inherit;}
-}
+	.homepagewrap {
+		width: 100%;
+		background-color: #f6f4e8;
+		background: url(../img/kolaz1.png) #f6f4e8 no-repeat;
+		background-size: 100% 100%;
+		background-position: center center;
+	}
+	.cestawrap {
+		width: 100%;
+		background-color: #f6f4e8;
+	}
+
+	@media only screen and (max-width: 40.063em) {
+		.mep-sidebar:after {
+			background: #fff;
+			border-right: none;
+			border-left: none;
+		}
+		div.mep-footer {height: auto;}
+		.katalog-1 {margin-bottom:inherit;}
+	}
