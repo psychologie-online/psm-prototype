@@ -538,11 +538,11 @@ nav.top-bar,
 	border-bottom: 2px solid #E2E3DD;
 }
 .add {
-	float:right;
-	margin-top:3rem;
-	margin-left:15px;
-	width:39px;
-	height:35px;
+	float: right;
+	margin-top: 2rem;
+	margin-left: 15px;
+	width: 39px;
+	height: 35px;
 	background: url('../img/pridat-do-cesty.svg');
 }
 .mep-sidebar h2 {
