@@ -482,11 +482,19 @@ nav.top-bar,
 .contain-to-grid .top-bar {
 	max-width: 72.5rem;
 }
+.wrap > .row:first-child {
+	border-left: 1px solid #f6f4e8;
+}
+@media only screen and (min-width: 95.063em) {
+	.wrap > .row:first-child {
+		border-left: 1px solid #e2e3dd;
+	}
+}
 /* Sidebar
 */
 .mep-sidebar {
 	background: #f6f4e8;
-	border-left: 1px solid #e2e3dd;
+	/*border-left: 1px solid #e2e3dd;*/
 	border-right: 1px solid #e2e3dd;
 	padding-left: 2.5%;
 	padding-right: 2.5%;
@@ -507,7 +515,7 @@ nav.top-bar,
 	left: -1px;
 	width:100%;
 	height:10000%;
-	border-left: 1px solid #e2e3dd;
+	/*border-left: 1px solid #e2e3dd;*/
 	border-right: 1px solid #e2e3dd;
 	box-sizing:content-box;
 	-moz-box-sizing:content-box;
@@ -694,14 +702,14 @@ div.mep-footer {
 .katalog-1 ul {
 	list-style: none;
 	font-size: 32px;
-    margin-left:0px;
-    width:100%;
+	margin-left:0px;
+	width:100%;
 }
 .katalog-1 li {
 	text-shadow: 1px 1px 0px #fff;
-    padding: 20px 70px;
-    border-top: 1px solid #e2e3dd;
-    
+	padding: 20px 70px;
+	border-top: 1px solid #e2e3dd;
+
 }
 .katalog-2 ul,
 .katalog-3 ul{
