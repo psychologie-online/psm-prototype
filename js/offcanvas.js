@@ -37,10 +37,10 @@ function getOrder() {
 		quantity = $(".sortable.item").length;
 
 		if( quantity < 1 ) {
-			$("#quantity").fadeOut();
+			$("#quantity").text(quantity);
 		}
 		else {
-			$("#quantity").fadeIn(100).text(quantity);
+			$("#quantity").text(quantity);
 		}
 
 		console.log("Počet položek: " + quantity);
