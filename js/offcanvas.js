@@ -45,7 +45,7 @@ function getOrder() {
 			$("#spustit-cestu").show();
 		}
 
-		console.log("Počet položek: " + quantity);
+		console.log("Počet položek(quantity): " + quantity);
 		console.log("IDs: " + IDs);
 
 		// Uložit pořadí do cookies pokaždý, když je vyvolaná funknce getOrder
@@ -134,10 +134,14 @@ function restoreCookie() {
 
 $(document).ready(function() {
 
+// Skryje tlačítko „Spustit cestu“
+$("#spustit-cestu").hide();
+
 // načte cookies jako první
 restoreCookie();
 
-$("#spustit-cestu").hide();
+// zjistí se stav a updatuje počítadlo
+getOrder();
 
 // (OPEN & CLOSE) SIDEBAR
 	// Click anywhere to close sidebar
