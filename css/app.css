@@ -735,6 +735,81 @@ div.mep-footer {
 	color: rgba(34,34,34,.5);
 	padding-right: 1rem;
 }
+.katalog .klasifikace .katalog-1 li {
+	padding-left: 4rem;
+}
+.katalog-1 li.mysleni:before {
+	content: "";
+	background: url(../img/mysleni.png) no-repeat;
+	position: absolute;
+	background-size: contain;
+	left: 16px;
+	width: 2rem;
+	height: 2rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 0.4rem;
+}
+.katalog-1 li.pozorovani:before {
+	content: "";
+	background: url(../img/pozorovani.png) no-repeat;
+	position: absolute;
+	background-size: contain;
+	left: 16px;
+	width: 2rem;
+	height: 2rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 0.4rem;
+}
+.katalog-1 li.vnimani:before {
+	content: "";
+	background: url(../img/vnimani.png) no-repeat;
+	position: absolute;
+	background-size: contain;
+	left: 16px;
+	width: 2rem;
+	height: 2rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 0.4rem;
+}
+.katalog-1 li.rozhodovani:before {
+	content: "";
+	background: url(../img/rozhodovani.png) no-repeat;
+	position: absolute;
+	background-size: contain;
+	left: 16px;
+	width: 2rem;
+	height: 2rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 0.4rem;
+}
+.katalog-1 li.jazyk:before {
+	content: "";
+	background: url(../img/jazyk.png) no-repeat;
+	position: absolute;
+	background-size: contain;
+	left: 16px;
+	width: 2rem;
+	height: 2rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 0.4rem;
+}
+.katalog-1 li.pamet:before {
+	content: "";
+	background: url(../img/pamet.png) no-repeat;
+	position: absolute;
+	background-size: contain;
+	left: 16px;
+	width: 2rem;
+	height: 2rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 0.4rem;
+}
 /*.katalog-1 {
 	background-color: rgba(0,0,0,0.05);
 }
