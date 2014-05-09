@@ -744,7 +744,7 @@ div.mep-footer {
 .katalog .klasifikace .katalog-1 li {
 	padding-left: 4.5rem;
 }
-.katalog-1 li:before {
+.katalog-1 li:before { /* Ikonky */
 	content: "";
 	position: absolute;
 	left: 1.5rem;
@@ -773,112 +773,97 @@ div.mep-footer {
 .katalog-1 li.pamet:before {
 	background-image: url(../img/pamet.png);
 }
-/*.katalog-1 {
-	background-color: rgba(0,0,0,0.05);
+/* Homepage */
+.e-intro
+{
+	width:100px;
+	height:100px;
+	background:url(../img/mep3.svg) no-repeat;
+	background-size: 100px 100px;
+	position:relative;
+	display: inline-block;
+	animation:rotation 0.7s 1 ease-in-out;
+	-webkit-animation:rotation 0.7s 1 ease-in-out; /*Safari and Chrome*/
+	-moz-animation:rotation 0.7s 1 ease-in-out; /*Firefox*/
+	-o-animation:rotation 0.7s 1 ease-in-out; /*Opera*/
 }
-.katalog .klasifikace .katalog-1 h2 small {
-	color: white;
+@keyframes rotation
+{
+	from {
+		left:300px;
+		transform:rotate(360deg);
+		-ms-transform:rotate(360deg); /* IE 9 */
+		-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
+		-moz-transform:rotate(360deg); /* Firefox */
+		-o-transform:rotate(360deg); /* Opera*/
+	}
+	to {
+		left:0px;
+		transform:rotate(0deg);
+		-ms-transform:rotate(0deg); /* IE 9 */
+		-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
+		-moz-transform:rotate(0deg); /* Firefox */
+		-o-transform:rotate(0deg); /* Opera*/
+	}
 }
-.katalog .katalog-1 li {
-	border-color: white;
+@-webkit-keyframes rotation /*Safari and Chrome*/
+{
+	from {
+		left:300px;
+		transform:rotate(360deg);
+		-ms-transform:rotate(360deg); /* IE 9 */
+		-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
+		-moz-transform:rotate(360deg); /* Firefox */
+		-o-transform:rotate(360deg); /* Opera*/
+	}
+	to {
+		left:0px;
+		transform:rotate(0deg);
+		-ms-transform:rotate(0deg); /* IE 9 */
+		-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
+		-moz-transform:rotate(0deg); /* Firefox */
+		-o-transform:rotate(0deg); /* Opera*/
+	}
 }
-.katalog .katalog-1 li:hover {
-	background-color: white;
-	-webkit-transition: 500ms;
-	transition: 500ms;
-	}*/
-
-	/* Homepage */
-	.e-intro
-	{
-		width:100px;
-		height:100px;
-		background:url(../img/mep3.svg) no-repeat;
-		background-size: 100px 100px;
-		position:relative;
-		display: inline-block;
-		animation:rotation 0.7s 1 ease-in-out;
-		-webkit-animation:rotation 0.7s 1 ease-in-out; /*Safari and Chrome*/
-		-moz-animation:rotation 0.7s 1 ease-in-out; /*Firefox*/
-		-o-animation:rotation 0.7s 1 ease-in-out; /*Opera*/
+.mep-intro
+{
+	position:relative;
+	display: inline-block;
+	overflow: hidden;
+	height: 100px;
+	padding-top: 25px;
+	animation:mepintro 1.5s 1 ease-in-out;
+	-webkit-animation:mepintro 1.5s 1 ease-in-out; /*Safari and Chrome*/
+	-moz-animation:mepintro 1.5s 1 ease-in-out; /*Firefox*/
+	-o-animation:mepintro 1.5s 1 ease-in-out; /*Opera*/
+}
+@keyframes mepintro
+{
+	from {
+		text-indent: -9999px;
 	}
-	@keyframes rotation
-	{
-		from {
-			left:300px;
-			transform:rotate(360deg);
-			-ms-transform:rotate(360deg); /* IE 9 */
-			-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
-			-moz-transform:rotate(360deg); /* Firefox */
-			-o-transform:rotate(360deg); /* Opera*/
-		}
-		to {
-			left:0px;
-			transform:rotate(0deg);
-			-ms-transform:rotate(0deg); /* IE 9 */
-			-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
-			-moz-transform:rotate(0deg); /* Firefox */
-			-o-transform:rotate(0deg); /* Opera*/
-		}
+	to {
+		text-indent: 0px;
 	}
-	@-webkit-keyframes rotation /*Safari and Chrome*/
-	{
-		from {
-			left:300px;
-			transform:rotate(360deg);
-			-ms-transform:rotate(360deg); /* IE 9 */
-			-webkit-transform:rotate(360deg); /* Opera, Chrome, and Safari */
-			-moz-transform:rotate(360deg); /* Firefox */
-			-o-transform:rotate(360deg); /* Opera*/
-		}
-		to {
-			left:0px;
-			transform:rotate(0deg);
-			-ms-transform:rotate(0deg); /* IE 9 */
-			-webkit-transform:rotate(0deg); /* Opera, Chrome, and Safari */
-			-moz-transform:rotate(0deg); /* Firefox */
-			-o-transform:rotate(0deg); /* Opera*/
-		}
+}
+@-webkit-keyframes mepintro /*Safari and Chrome*/
+{
+	from {
+		text-indent: -9999px;
 	}
-	.mep-intro
-	{
-		position:relative;
-		display: inline-block;
-		overflow: hidden;
-		height: 100px;
-		padding-top: 25px;
-		animation:mepintro 1.5s 1 ease-in-out;
-		-webkit-animation:mepintro 1.5s 1 ease-in-out; /*Safari and Chrome*/
-		-moz-animation:mepintro 1.5s 1 ease-in-out; /*Firefox*/
-		-o-animation:mepintro 1.5s 1 ease-in-out; /*Opera*/
+	to {
+		text-indent: 0px;
 	}
-	@keyframes mepintro
-	{
-		from {
-			text-indent: -9999px;
-		}
-		to {
-			text-indent: 0px;
-		}
-	}
-	@-webkit-keyframes mepintro /*Safari and Chrome*/
-	{
-		from {
-			text-indent: -9999px;
-		}
-		to {
-			text-indent: 0px;
-		}
-	}
-	.claimbox {
-		background-size: 100%;
-		height:278px;
-	}
-	.intro-wrap {
-		margin: auto;
-		margin-top: 45px;
-		text-align: center;
-	}
+}
+.claimbox {
+	background-size: 100%;
+	height:278px;
+}
+.intro-wrap {
+	margin: auto;
+	margin-top: 45px;
+	text-align: center;
+}
 }
 .claimbox {
 	background-size: 100%;
