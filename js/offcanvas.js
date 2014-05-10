@@ -196,10 +196,11 @@ $('a.menu').click (function(e){
 	return false;
 });
 
+// http://stackoverflow.com/questions/16448042/how-do-i-remove-element-using-click-and-remove-in-jquery
 // add item
-$(".add-to-sidebar").on("click", addItem);
+$(document).on("click", ".add-to-sidebar", addItem);
 // remove item
-$(".icon-close").on("click", removeItem);
+$("ul#list").on("click", ".icon-close", removeItem);
 
 // update the order
 my_srt_list.addEventListener("dragend", getOrder);
