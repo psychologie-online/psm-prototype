@@ -144,18 +144,20 @@ function restoreCookie() {
 
 	if (!cookies) return;
 
-	var SavedID = cookies.split(',');
+	SavedID = cookies.split(',');
+	console.log("before SavedID: " + SavedID);
+
 	for ( var u=0, ul=SavedID.length; u < ul; u++ ) {
 		SavedID[u] = SavedID[u].split(',');
 
-		// console.log("SavedID: " + SavedID);
-	}
-	for (var Sitem=0, n = SavedID.length; Sitem < n; Sitem++) {
+		exp_ID = SavedID[u];
 
 		prependItem();
 
-		// console.log("Sitem: " + Sitem);
+		console.log("[u]: " + u);
+		console.log("after SavedID: " + SavedID[u]);
 	}
+	console.log("============");
 }
 
 
