@@ -30,14 +30,7 @@ function closeMenu(){
 	$('.wrap, .contain-to-grid').removeClass('menu-open');
 }
 
-// Get the sorted string of items
-function getOrder() {
-	my_srt_items = document.querySelectorAll("[data-sortable-id]");
-	IDs = [].map.call(my_srt_items, function (element) {
-			return element.dataset.sortableId; // [data-sortable-id]
-			// zde by se měly načíst i další data- ?
-		});
-
+function updateQuantity() {
 	// Update the number indicating the quantity of items added to the sidebar
 	quantity = $(".sortable.item").length;
 
@@ -51,7 +44,17 @@ function getOrder() {
 	}
 
 	console.log("# položek (quantity): " + quantity);
-		// console.log("IDs: " + IDs);
+}
+
+// Get the sorted string of items
+function getOrder() {
+	my_srt_items = document.querySelectorAll("[data-sortable-id]");
+	IDs = [].map.call(my_srt_items, function (element) {
+			return element.dataset.sortableId; // [data-sortable-id]
+			// zde by se měly načíst i další data- ?
+		});
+
+	updateQuantity();
 
 	// Uložit pořadí do cookies pokaždý, když je vyvolaná funknce getOrder, což by se mělo stát pokaždé, když se změní počet či pořadí položek v offanvasu
 	storeCookie();
@@ -167,8 +170,8 @@ $("#spustit-cestu").hide();
 // Načte položky z cookies
 restoreCookie();
 
-// Zjistí se stav a updatuje počítadlo – var quantity – a podle výsledku se zase zobrazí počet a tlačítko
-getOrder();  // Přepisuje správně naloadované cookies. Oddělit update počítadla?
+// Zjistí se stav a updatuje počítadlo – var quantity – a podle výsledku se zobrazí počet a tlačítko
+updateQuantity();
 
 // Click anywhere to close sidebar
 $(document).click (function(e) {
