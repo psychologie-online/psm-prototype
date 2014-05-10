@@ -6,8 +6,13 @@ var my_srt_list = document.getElementById("list"); // ul
 var my_srt_items // li [data-sortable-id]
 var IDs // [data-sortable-id]=" "
 
-var add_to_sidebar = document.getElementsByClassName("add-to-sidebar");
+var adds_to_sidebar = document.getElementsByClassName("add-to-sidebar");
+var add_index
 var remove_from_sidebar
+
+var exp_ID
+var exp_name
+var exp_text
 
 
 // ---------------------------------------------------------------------------------------------------
@@ -20,7 +25,6 @@ function openMenu(){
 			$(".sortable.item").delay(500).removeClass( "highlight" ); // Highlight new added item
 		}, 300);
 }
-
 function closeMenu(){
 	$('aside.menu').css('z-index', -100);
 	$('.wrap, .contain-to-grid').removeClass('menu-open');
@@ -31,6 +35,7 @@ function getOrder() {
 	my_srt_items = document.querySelectorAll("[data-sortable-id]");
 	IDs = [].map.call(my_srt_items, function (element) {
 			return element.dataset.sortableId; // [data-sortable-id]
+			// zde by se měly načíst i další data- ?
 		});
 
 	// Update the number indicating the quantity of items added to the sidebar
@@ -45,8 +50,8 @@ function getOrder() {
 		$("#spustit-cestu").show();
 	}
 
-	console.log("# položek(quantity): " + quantity);
-	// console.log("IDs: " + IDs);
+	console.log("# položek (quantity): " + quantity);
+		// console.log("IDs: " + IDs);
 
 	// Uložit pořadí do cookies pokaždý, když je vyvolaná funknce getOrder, což by se mělo stát pokaždé, když se změní počet či pořadí položek v offanvasu
 	storeCookie();
@@ -54,14 +59,12 @@ function getOrder() {
 	remove_from_sidebar = document.getElementsByClassName("icon-close");
 	console.log("# icon-close (getOrder): " + remove_from_sidebar.length + "\n ===========");
 
-	return false;
+	// return false;
 }
 
 // HTML for new item
 function prependItem() {
-	var exp_name = $(add_to_sidebar).data('exp-name');
-	var exp_text = $(add_to_sidebar).data('exp-text');
-	var exp_ID   = $(add_to_sidebar).data('exp-id');
+	// PROBLÉM: Script bere data jen z první instance na stránce
 
 	var new_srt_list_item	="";
 	new_srt_list_item  += "<li data-sortable-id=\"" + exp_ID + "\" class=\"sortable item highlight\">";
@@ -79,7 +82,7 @@ function prependItem() {
 	new_srt_list_item  += "      <p>" + exp_text + "<\/p>";
 	new_srt_list_item  += "    <\/div>";
 	new_srt_list_item  += "    <div class=\"small-2 columns text-center\">";
-	new_srt_list_item  += "      <span class=\"icon-close\"><\/span><span class=\"mls\"><\/span>";
+	new_srt_list_item  += "      <span id=\"remove\" class=\"icon-close\"><\/span><span class=\"mls\"><\/span>";
 	new_srt_list_item  += "    <\/div>";
 	new_srt_list_item  += "  <\/div>";
 	// new_srt_list_item  += "  <hr>";
@@ -90,32 +93,46 @@ function prependItem() {
 	$("ul#list").prepend(new_srt_list_item);
 }
 
+function addItem() {
+	// Pozice aktivního odkazu
+	add_index = $(".add-to-sidebar").index(this);
+
+	exp_ID   = $(this).data("exp-id");
+	exp_name = $(this).data("exp-name");
+	exp_text = $(this).data("exp-text");
+
+	prependItem();
+	console.log("ADDED (addItem)");
+	console.log("–> Length: " + (".add-to-sidebar").length );
+	console.log("-> Index: " +  add_index );
+
+	getOrder();
+	openMenu();
+}
 function removeItem(e) {
-
-	console.log("# icon-close (removeItem): " + remove_from_sidebar.length);
-
-	e.preventDefault();
+	// e.preventDefault();
 	e.stopPropagation();
-	$(e.target).parents('.sortable.item').remove();
+	// return false
+	console.log("# icon-close (removeItem): " + $(".icon-close").length);
+
+	$(e.target).parents(".sortable.item").remove();
 
 	console.log("REMOVED (removeItem)");
 
 	getOrder();
-
 }
 
 // COOKIES
 //
-// ! Doesn't work in Chrome when testing local – use Firefox
-// Store an order of our sortable list for user in cookie
-// ?
+// ! Doesn't work in Chrome when local – use Firefox
+// Store an order of our sortable list for user in a cookie
 function storeCookie() {
 	$.cookie('order', IDs, { expires: 31, path: '/' });
 
-	// console.log("Cookie: " + cookie);
-	var cookies = $.cookie("order");
-	console.log("SAVED (storeCookie): " + cookies);
-}
+		// console.log("Cookie: " + cookie);
+		var cookies = $.cookie("order");
+		console.log("SAVED (storeCookie): " + cookies);
+	}
 // http://stackoverflow.com/questions/15353244/jquery-ui-sortable-and-js-cookie
 function restoreCookie() {
 
@@ -147,19 +164,18 @@ $(document).ready(function() {
 // Skryje tlačítko „Spustit cestu“
 $("#spustit-cestu").hide();
 
-// načte položky z cookies
+// Načte položky z cookies
 restoreCookie();
 
-// zjistí se stav a updatuje počítadlo – proměnná quantity – a podle výsledku se zase zobrazí počet a tlačítko
-getOrder();
+// Zjistí se stav a updatuje počítadlo – var quantity – a podle výsledku se zase zobrazí počet a tlačítko
+getOrder();  // Přepisuje správně naloadované cookies. Oddělit update počítadla?
 
-// (OPEN & CLOSE) SIDEBAR
 // Click anywhere to close sidebar
 $(document).click (function(e) {
 	if (
 		!$(e.target).is('a.menu') &&
-		!$(e.target).is(add_to_sidebar) &&
-		!$(e.target).is(remove_from_sidebar) &&
+		!$(e.target).is(".add-to-sidebar") &&
+		!$(e.target).is(".icon-close") &&
 		$(e.target).closest('aside.menu').length === 0 ) {
 
 		closeMenu();
@@ -180,17 +196,12 @@ $('a.menu').click (function(e){
 	return false;
 });
 
-// ADD to & REMOVE from SIDEBAR
-	// #11 https://github.com/psychologie-online/psm-prototype/issues/11
-	// Položky s možností přidání do výběru musejí mít unikátní manuálně nastavené ID -> var exp_ID = [data-exp-id]
-	$(add_to_sidebar).on("click", function() {
-		prependItem();
-		openMenu();
-	});
-
-// Refresh the order everytime the item is dragged & dropped, added or deleted
-my_srt_list.addEventListener("dragend", getOrder);
-$(add_to_sidebar).on("click", getOrder);
+// add item
+$(".add-to-sidebar").on("click", addItem);
+// remove item
 $(".icon-close").on("click", removeItem);
+
+// update the order
+my_srt_list.addEventListener("dragend", getOrder);
 
 });
