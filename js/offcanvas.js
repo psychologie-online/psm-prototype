@@ -6,10 +6,6 @@ var my_srt_list = document.getElementById("list"); // ul
 var my_srt_items // li [data-sortable-id]
 var IDs // [data-sortable-id]=" "
 
-var adds_to_sidebar = document.getElementsByClassName("add-to-sidebar");
-var add_index
-var remove_from_sidebar
-
 var exp_ID
 var exp_name
 var exp_text
@@ -61,8 +57,6 @@ function getOrder() {
 
 	remove_from_sidebar = document.getElementsByClassName("icon-close");
 	console.log("# icon-close (getOrder): " + remove_from_sidebar.length + "\n ===========");
-
-	// return false;
 }
 
 // HTML for new item
@@ -125,9 +119,11 @@ function removeItem(e) {
 	getOrder();
 }
 
+
 // COOKIES
 //
 // ! Doesn't work in Chrome when local – use Firefox
+
 // Store an order of our sortable list for user in a cookie
 function storeCookie() {
 	$.cookie('order', IDs, { expires: 31, path: '/' });
@@ -136,6 +132,7 @@ function storeCookie() {
 		var cookies = $.cookie("order");
 		console.log("SAVED (storeCookie): " + cookies);
 	}
+
 // http://stackoverflow.com/questions/15353244/jquery-ui-sortable-and-js-cookie
 function restoreCookie() {
 
@@ -184,7 +181,7 @@ $(document).click (function(e) {
 		$(e.target).closest('aside.menu').length === 0 ) {
 
 		closeMenu();
-}
+	}
 });
 
 // Menu link sidebar
@@ -201,10 +198,10 @@ $('a.menu').click (function(e){
 	return false;
 });
 
+// add item - static
+$(".add-to-sidebar").click(addItem);
+// remove item – dynamic
 // http://stackoverflow.com/questions/16448042/how-do-i-remove-element-using-click-and-remove-in-jquery
-// add item
-$(document).on("click", ".add-to-sidebar", addItem);
-// remove item
 $("ul#list").on("click", ".icon-close", removeItem);
 
 // update the order
