@@ -331,6 +331,12 @@ z-index: 99999;
 	margin: 0 auto;
 	padding: 1.8rem;
 }
+
+.cesta .panel h1 {
+	font-size: 3em;
+}
+
+
 .cesta .progress {
 	border: 1px solid #FFF;
 	height: 12px;
