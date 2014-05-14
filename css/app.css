@@ -1,3 +1,5 @@
+
+
 /* Fonty */
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,latin-ext);
@@ -369,6 +371,7 @@ header.contain-to-grid {
 .top-bar-section li:not(.has-form) a:hover:not(.button) {
 	background-color: #2a8b6d;
 }
+.top-bar-section li:last-child:not(.has-form) a:not(.button) {padding: 0 6px;}
 .top-bar-section li:not(.has-form) a:not(.button),
 .top-bar-section li:not(.has-form) a:hover:not(.button) {
 	-webkit-transition: background-color 300ms ease-out;
@@ -387,7 +390,7 @@ li.name span {
     letter-spacing: 4px;
 }
 .exper {
-    margin-left: 11px;
+    margin-left: 12px;
 }
 .top-bar svg,
 .top-bar img {
@@ -691,7 +694,7 @@ div.mep-footer {
 }
 .experiment .add {
 	margin-top: 3em;
-    margin-right: 11px;
+    margin-right: 2px;
 }
 .experiment img {
 	float: left;
