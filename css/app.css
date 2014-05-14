@@ -376,16 +376,17 @@ a.menu, .top-bar li a:not(.button) {
 	padding-top: 3px!important;
 }
 li.name {padding-top: 2px;}
+li.name span {
+    margin-left: 8px;
+    letter-spacing: 4px;
+}
+.exper {
+    margin-left: 11px;
+}
 .top-bar svg,
 .top-bar img {
 	vertical-align: middle;
 	margin-top:-3px;
-}
-.arrow-cesta {
-	font-weight: bold;
-	font-size: 2em;
-	margin-left: 5px;
-	line-height: 100%;
 }
 .searchbox {
 	border: 1px solid #2a8b6d;
@@ -684,6 +685,7 @@ div.mep-footer {
 }
 .experiment .add {
 	margin-top: 3em;
+    margin-right: 11px;
 }
 .experiment img {
 	float: left;
