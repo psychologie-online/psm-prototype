@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="css/app.css" />
   <!-- @font-face icons from icomoon.io/app/ -->
   <link rel="stylesheet" href="css/ico.css">
-
+  <!--[if lt IE 10]>
+    <link rel="stylesheet" type="text/css" href="css/ie9.css" />
+  <![endif]-->
+  
   <script src="js/vendor/modernizr.js"></script>
 </head>
 <body class="katalog">
@@ -23,7 +26,7 @@
     <ul class="title-area">
       <li class="name">
         <h1><a href="index.html"><svg width="33" height="33">
-          <image xlink:href="img/mep.svg" src="img/mep.png" width="33" height="33" alt="Muzeum experimentální psychologie" /></svg>&nbsp; M E P</a></h1>
+          <image xlink:href="img/mep.svg" src="img/mep.png" width="33" height="33" alt="Muzeum experimentální psychologie" /></svg><span>MEP</span></a></h1>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
       </ul>
@@ -46,9 +49,9 @@
           <li class="divider"></li>
           <li><a href="kurzy.html">Kurzy</a></li>
           <li class="divider"></li>
-          <li><a class="menu" href="#"><span class="mls"> <svg width="25" height="29">
+          <li><a class="menu" href="#"><span class="exper mls"> <svg width="25" height="29">
             <image xlink:href="img/cesta.svg" src="img/cesta.png" width="25" height="29" />
-          </svg> </span><span id="quantity" class="cesty-quantity">0</span> <span class="arrow-cesta">‹</span></a></li>
+          </svg> </span><span id="quantity" class="cesty-quantity">0</span></a></li>
         </ul>
       </section>
     </nav>
@@ -63,19 +66,19 @@
     <section class="medium-12 large-4 columns mep-sidebar ">
       <h1>Katalog</h1>
       <div class="show-for-medium-up">
-        <p>Psychologický experiment patří mezi základní metody psychologického výzkumu. Na rozdíl od jiných výzkumných metod (pozorování, dotazník, korelační analýza aj.) slouží stejně, jako ostatní experimentální metody, k určení kauzálního (příčinného) vztahu mezi zkoumanými proměnnými.</p>
+        <p>Psychologický experiment patří mezi základní metody psychologického výzkumu. Na rozdíl od jiných výzkumných metod slouží k určení kauzálního (příčinného) vztahu mezi zkoumanými proměnnými.</p>
         <br>
         <dl>
           <dt>Kognitivní sféry</dt>
-          <dd>Kognitivní sféry jednotlivých vjemů a zkušeností postupuje z obecných pojmů a jejich prostřednictvím k praktickému i teoretickému zvládání světa.</dd>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus eu ante vel aliquet. In ac diam ut nisl scelerisque adipiscing. Proin commodo urna quis magna tincidunt congue.</dd>
         </dl>
         <dl>
           <dt>Vědecké školy</dt>
-          <dd>Historie a zkušenost postupuje od obecným pojmům a jejich prostřednictvím k praktickému i teoretickému zvládání světa.</dd>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus eu ante vel aliquet.</dd>
         </dl>
         <dl>
           <dt>Metoda</dt>
-          <dd>Formální vlastnosti a účel jednotlivých vjemů a zkušeností postupuje nad obecnými pojmy a jejich prostřednictvím praxe.</dd>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus eu ante vel aliquet.</dd>
         </dl>
       </div>
 
@@ -86,29 +89,29 @@
         <section class="small-12 columns katalog-1">
           <h2><small>Kognitivní sféry</small></h2>
           <ul>
-            <li class="mysleni">
-              <a href="kategorie.html">Myšlení</a><span>4</span>
-              <div>Historie a zkušenost postupuje od obecným pojmům a jejich prostřednictvím k praktickému i teoretickému zvládání světa.</div>
-            </li>
             <li class="pozorovani">
-              <a href="kategorie.html">Pozorování</a><span>3</span>
-              <div>Jejich prostřednictvím k praktickému i teoretickému zvládání světa.</div>
+              <a href="kategorie.html">Čití</a><span>3</span>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus eu ante vel aliquet.</div>
             </li>
             <li class="vnimani">
               <a href="kategorie.html">Vnímání</a><span>6</span>
-              <div>Zkušeností postupuje nad obecnými pojmy a jejich prostřednictvím praxe.</div>
-            </li>
-            <li class="rozhodovani">
-              <a href="kategorie.html">Rozhodování</a><span>7</span>
-              <div>Formální vlastnosti a účel jednotlivých vjemů</div>
-            </li>
-            <li class="jazyk">
-              <a href="kategorie.html">Jazyk</a><span>7</span>
-              <div>Kognitivní sféry jednotlivých vjemů a zkušeností postupuje z obecných pojmů.</div>
+              <div>In ac diam ut nisl scelerisque adipiscing. Proin commodo urna quis magna tincidunt congue.</div>
             </li>
             <li class="pamet">
               <a href="kategorie.html">Paměť</a><span>5</span>
-              <div>Postupuje nad obecnými pojmy a jejich prostřednictvím praxe.</div>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus eu ante vel aliquet.</div>
+            </li>
+            <li class="jazyk">
+              <a href="kategorie.html">Jazyk</a><span>7</span>
+              <div>In ac diam ut nisl scelerisque adipiscing. Proin commodo urna quis magna tincidunt congue.</div>
+            </li>
+            <li class="mysleni">
+              <a href="kategorie.html">Myšlení</a><span>4</span>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus eu ante vel aliquet.</div>
+            </li>
+            <li class="rozhodovani">
+              <a href="kategorie.html">Rozhodování</a><span>7</span>
+              <div>In ac diam ut nisl scelerisque adipiscing. Proin commodo urna quis magna tincidunt congue.</div>
             </li>
           </ul>
         </section>
@@ -209,10 +212,9 @@
       </div>
       <div class="small-10 columns small-centered">
         <ol>
-          <li>Přidejte experiment pomocí ikonky <span class="icon-star2"></span><span class="mls"> </span>srdce do oblíbených. Experiment se pak ukáže v tomto seznamu.</li>
-          <li>Do seznamu můžete přidat experimentů, kolik chcete. Můžete změnit jejich pořadí pomocí <span class="icon-menu2"></span><span class="mls"> </span>uchopením a přetáhnutím této ikonky</li>
-          <li>Všechny oblíbené experimenty lze spustit ve speciálním módu určeném pro příjemnější postupné procházení.</li>
-          <li>Bla bla profit!</li>
+          <li>Přidejte experiment pomocí ikonky (+) do oblíbených. Experiment se ukáže v tomto seznamu.</li>
+          <li>Do seznamu můžete přidat experimentů, kolik chcete. Můžete změnit jejich pořadí pomocí  uchopení a přetáhnutí. Experiment odstraníte kliknutím na křížek.</li>
+          <li>Vaše oblíbené experimenty lze spustit ve speciálním módu určeném pro příjemnější postupné procházení.</li>
         </ol>
       </div>
     </div>

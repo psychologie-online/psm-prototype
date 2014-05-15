@@ -1,0 +1,8 @@
+div.mep-footer {
+	position: relative;
+}
+
+.mep-sidebar:after, .mep-sidebar:before {
+	position:absolute;
+	z-index:99;
+}
